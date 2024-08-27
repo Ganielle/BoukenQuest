@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816e6f07ddca9b0498860ba622212724, type: 3}
+  m_Name: 000 - Tileset
+  m_EditorClassIdentifier: 
+  tileSetName: CastleTileset
+  customBrushDestinationFolder: Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Balcony.prefab
+  tileData:
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Balcony.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Balcony_Post.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Balcony_Railing.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Basement_Passage.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Basement_Passage_Mix.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Basement_Var1.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Basement_Var2.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Basement_Var3.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Basement_Var4.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Basement_Wall_Var1.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Basement_Wall_Var2.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Basement_Wall_Var3.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Door_Basement_Left.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Door_Basement_Right.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Door_Iron_Left.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Door_Iron_Right.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Door_Wooden_Round_Left.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Door_Wooden_Round_Right.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/DoorGate_Wooden_Left.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/DoorGate_Wooden_Right.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Big.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Big_Passage.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Big_to_Custom.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Big_Wall.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Big_Window.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_CornerCrossing.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Custom_Border_Arched.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Custom_Border_Flat.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Custom_Center.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Custom_Corner_Arched.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Custom_Corner_Flat.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Custom_Corner_Inverted.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Hall_Center.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Hall_Center_Stairs.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Hall_Corner.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Hall_Corner_Inverted.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Hall_Wall_Stairs_Left.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Hall_Wall_Stairs_Right.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Passage.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Passage_Wood.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Straight.prefab
+  - "Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Straight_14\xB0.prefab"
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Straight_Half.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Wall_Var1.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Wall_Var2.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Wall_Var3.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Dungeon_Wall_Window.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/FloorTIle.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Hallway_Crossing.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Hallway_Curve_Long.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Hallway_Curve_Short.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Hallway_Double.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Hallway_Full.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Hallway_Half.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Hallway_Quarter.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Hallway_TCrossing.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Hallway_toStaircase_Bottom.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Hallway_toStaircase_Top.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Holefix_Double.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/HoleFix_Half.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Holefix_Single.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Jail_Door_Left.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Jail_Door_Right.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Jail_Gate.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Jail_Wall.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Jail_Wall_broken.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Pillar.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Portcullis_Metal.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Portcullis_Wood.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Staircase.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Staircase
+    with Walls.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Stairs_High.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Stairs_Low.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Stairs_Platform.prefab
+  - Assets/001 - ExternalAssets/BrokenVector/LowPolyDungeon/Prefabs/Tiles/Steps_Small.prefab
+  customBrushData: []

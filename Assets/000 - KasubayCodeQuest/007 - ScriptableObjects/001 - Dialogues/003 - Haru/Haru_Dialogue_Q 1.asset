@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36f462126ea3034e8b112d074691210, type: 3}
+  m_Name: Haru_Dialogue_Q 1
+  m_EditorClassIdentifier: 
+  <nameSequence>k__BackingField:
+  - 
+  - Haru
+  - Haru
+  <dialogueSequence>k__BackingField:
+  - '*Picks up the item'
+  - Now i get the <color="green">"Return Key"</color>. Now I need to go to <color="green">Ms.
+    Hamada</color> for the next instruction.
+  - Ms. Hamada is on the <color="green">"faculty room"</color>.
