@@ -18,6 +18,7 @@ public class GamePlayerController : MonoBehaviour
     [field: SerializeField] public Vector2 MovementDirection { get; private set; }
     [field: SerializeField] public Vector2 LookDirection { get; private set; }
     [field: SerializeField] public bool Interact { get; private set; }
+    [field: SerializeField] public bool IsJump { get; private set; }
     [field: SerializeField] public bool Pause { get; private set; }
     [field: SerializeField] public bool Disable { get; set; }
 
@@ -41,6 +42,8 @@ public class GamePlayerController : MonoBehaviour
         gameControls.School.Interact.canceled += _ => InteractStop();
         gameControls.School.Pause.started += _ => PauseStart();
         gameControls.School.Pause.canceled += _ => PauseStop();
+        gameControls.School.Jump.started += _ => JumpStart();
+        gameControls.School.Jump.canceled += _ => JumpStop();
 
 #if !UNITY_ANDROID
         gameControls.School.Look.performed += _ => LookStart();
@@ -56,6 +59,8 @@ public class GamePlayerController : MonoBehaviour
         gameControls.School.Interact.canceled += _ => InteractStop();
         gameControls.School.Pause.started -= _ => PauseStart();
         gameControls.School.Pause.canceled -= _ => PauseStop();
+        gameControls.School.Jump.started -= _ => JumpStart();
+        gameControls.School.Jump.canceled -= _ => JumpStop();
 
 
 #if !UNITY_ANDROID
@@ -145,6 +150,21 @@ public class GamePlayerController : MonoBehaviour
     public void PauseTurnOff()
     {
         Pause = false;
+    }
+
+    private void JumpStart()
+    {
+        IsJump = true;
+    }
+
+    private void JumpStop()
+    {
+        IsJump = false;
+    }
+
+    public void JumpForceStop()
+    {
+        IsJump = false;
     }
 
     private void MobileLookStart()

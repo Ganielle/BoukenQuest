@@ -62,6 +62,15 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""9560b728-f98e-4477-aa06-5f92bc8bdfd2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -183,6 +192,28 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""PC"",
                     ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a2b03cd-5f20-4888-bb3e-ab51b3143de8"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PC"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3df2356c-9fca-4f0d-8ff0-1b4852000061"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Android"",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -326,6 +357,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
         m_School_Interact = m_School.FindAction("Interact", throwIfNotFound: true);
         m_School_Pause = m_School.FindAction("Pause", throwIfNotFound: true);
         m_School_Look = m_School.FindAction("Look", throwIfNotFound: true);
+        m_School_Jump = m_School.FindAction("Jump", throwIfNotFound: true);
         // StageOne
         m_StageOne = asset.FindActionMap("StageOne", throwIfNotFound: true);
         m_StageOne_Left = m_StageOne.FindAction("Left", throwIfNotFound: true);
@@ -396,6 +428,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_School_Interact;
     private readonly InputAction m_School_Pause;
     private readonly InputAction m_School_Look;
+    private readonly InputAction m_School_Jump;
     public struct SchoolActions
     {
         private @GameControls m_Wrapper;
@@ -404,6 +437,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_School_Interact;
         public InputAction @Pause => m_Wrapper.m_School_Pause;
         public InputAction @Look => m_Wrapper.m_School_Look;
+        public InputAction @Jump => m_Wrapper.m_School_Jump;
         public InputActionMap Get() { return m_Wrapper.m_School; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -425,6 +459,9 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
         }
 
         private void UnregisterCallbacks(ISchoolActions instance)
@@ -441,6 +478,9 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
         }
 
         public void RemoveCallbacks(ISchoolActions instance)
@@ -544,6 +584,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
     public interface IStageOneActions
     {

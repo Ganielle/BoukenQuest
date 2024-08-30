@@ -12,6 +12,7 @@ TagManager:
   - Checkpoint
   - Teleporter
   - FinalQuest
+  - QuestionQuest
   layers:
   - Default
   - TransparentFX

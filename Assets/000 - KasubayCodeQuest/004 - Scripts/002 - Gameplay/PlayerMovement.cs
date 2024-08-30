@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("PLAYER MOVEMENTS")]
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float gravity = -9.81f;
+    [SerializeField] private float jumpStrength;
+    [SerializeField] private float gravityMultiplier;
     [SerializeField] private float rotationSmoothTime = 0.1f;
 
     [Header("ANIMATOR")]
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float angle;
     [SerializeField] private float cameraangle;
     [SerializeField] private float currentVelocity;
+    [SerializeField] private float velocity;
 
     private void OnEnable()
     {
@@ -30,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        Jump();
+        ApplyGravity();
         MovePlayer();
         MovementAnimation();
     }
@@ -59,8 +64,34 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Apply gravity
-        moveDirection.y = gravity;
+        moveDirection.y = velocity;
         characterController.Move(moveDirection * Time.deltaTime);
+    }
+
+    private void Jump()
+    {
+        if (!playerControls.IsJump) return;
+        if (!IsGrounded())
+        {
+            playerControls.JumpForceStop();
+            return;
+        }
+
+        velocity += jumpStrength;
+    }
+
+    private void ApplyGravity()
+    {
+        if (IsGrounded() && velocity < 0.0f)
+        {
+            velocity = -1.0f;
+        }
+        else
+        {
+            velocity += gravity * gravityMultiplier * Time.deltaTime;
+        }
+
+        moveDirection.y = velocity;
     }
 
     private void MovementAnimation()
@@ -69,5 +100,9 @@ public class PlayerMovement : MonoBehaviour
             playerAnimator.SetFloat("movement", 1);
         else
             playerAnimator.SetFloat("movement", -1);
+
+        playerAnimator.SetFloat("velocity", velocity);
     }
+
+    private bool IsGrounded() => characterController.isGrounded;
 }
