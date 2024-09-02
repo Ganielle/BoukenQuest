@@ -119,6 +119,7 @@
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\Testing240.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\PathSpline.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\PlayerPushObject.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\001 - Stage2\SentenceArrangeItem.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\004 - Quest\ItemQuestData.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\002 - Quest\HiraganaArrangeItem.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\GameManager.cs" />

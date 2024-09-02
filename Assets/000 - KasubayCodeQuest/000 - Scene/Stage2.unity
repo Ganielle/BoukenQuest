@@ -903,7 +903,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 869079753}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: PreviousIndex
         m_Mode: 1
@@ -1907,7 +1907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &61170846
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7540,7 +7540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336010720}
   - component: {fileID: 336010722}
-  - component: {fileID: 336010721}
+  - component: {fileID: 336010723}
   m_Layer: 5
   m_Name: Item (12)
   m_TagString: Untagged
@@ -7567,27 +7567,11 @@ RectTransform:
   - {fileID: 893926867}
   m_Father: {fileID: 104098579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 956.75073, y: 0}
+  m_SizeDelta: {x: 285.5, y: 202.8}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &336010721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336010719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 995082090f657ad4c9f848d7d14d8cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiraganaTMP: {fileID: 1033429640}
-  indexTMP: {fileID: 1743668155}
-  itemData: {fileID: 0}
-  itemIndex: 0
 --- !u!222 &336010722
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7596,6 +7580,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336010719}
   m_CullTransparentMesh: 1
+--- !u!114 &336010723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336010719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &337448433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12602,7 +12598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 6.3}
+  m_AnchoredPosition: {x: 0, y: 6.299988}
   m_SizeDelta: {x: 59.3051, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1001 &546990024
@@ -13902,7 +13898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 595416879}
   - component: {fileID: 595416881}
-  - component: {fileID: 595416880}
+  - component: {fileID: 595416882}
   m_Layer: 5
   m_Name: Item (14)
   m_TagString: Untagged
@@ -13929,27 +13925,11 @@ RectTransform:
   - {fileID: 1394554642}
   m_Father: {fileID: 104098579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 551.6507, y: -237.47}
+  m_SizeDelta: {x: 285.5, y: 202.8}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &595416880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595416878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 995082090f657ad4c9f848d7d14d8cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiraganaTMP: {fileID: 1718710589}
-  indexTMP: {fileID: 1349292846}
-  itemData: {fileID: 0}
-  itemIndex: 0
 --- !u!222 &595416881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13958,6 +13938,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595416878}
   m_CullTransparentMesh: 1
+--- !u!114 &595416882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595416878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &598323058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14208,7 +14200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 608598771}
   - component: {fileID: 608598773}
-  - component: {fileID: 608598772}
+  - component: {fileID: 608598774}
   m_Layer: 5
   m_Name: Item (11)
   m_TagString: Untagged
@@ -14235,27 +14227,11 @@ RectTransform:
   - {fileID: 1861310723}
   m_Father: {fileID: 104098579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 551.6507, y: 0}
+  m_SizeDelta: {x: 285.5, y: 202.8}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &608598772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608598770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 995082090f657ad4c9f848d7d14d8cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiraganaTMP: {fileID: 183072070}
-  indexTMP: {fileID: 15517616}
-  itemData: {fileID: 0}
-  itemIndex: 0
 --- !u!222 &608598773
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14264,6 +14240,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608598770}
   m_CullTransparentMesh: 1
+--- !u!114 &608598774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608598770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &615558674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14692,7 +14680,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 608598772}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: PreviousIndex
         m_Mode: 1
@@ -18741,7 +18729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 869079752}
   - component: {fileID: 869079754}
-  - component: {fileID: 869079753}
+  - component: {fileID: 869079755}
   m_Layer: 5
   m_Name: Item (15)
   m_TagString: Untagged
@@ -18768,27 +18756,11 @@ RectTransform:
   - {fileID: 1832837669}
   m_Father: {fileID: 104098579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 956.75073, y: -237.47}
+  m_SizeDelta: {x: 285.5, y: 202.8}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &869079753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869079751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 995082090f657ad4c9f848d7d14d8cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiraganaTMP: {fileID: 972761399}
-  indexTMP: {fileID: 411439829}
-  itemData: {fileID: 0}
-  itemIndex: 0
 --- !u!222 &869079754
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18797,6 +18769,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869079751}
   m_CullTransparentMesh: 1
+--- !u!114 &869079755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869079751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &869792586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19410,7 +19394,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 336010721}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: NextIndex
         m_Mode: 1
@@ -22020,7 +22004,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 595416880}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: PreviousIndex
         m_Mode: 1
@@ -24170,7 +24154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1095841354}
   - component: {fileID: 1095841356}
-  - component: {fileID: 1095841355}
+  - component: {fileID: 1095841357}
   m_Layer: 5
   m_Name: Item (13)
   m_TagString: Untagged
@@ -24197,27 +24181,11 @@ RectTransform:
   - {fileID: 1323838189}
   m_Father: {fileID: 104098579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 146.55072, y: -237.47}
+  m_SizeDelta: {x: 285.5, y: 202.8}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1095841355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095841353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 995082090f657ad4c9f848d7d14d8cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiraganaTMP: {fileID: 207558240}
-  indexTMP: {fileID: 2035175115}
-  itemData: {fileID: 0}
-  itemIndex: 0
 --- !u!222 &1095841356
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24226,6 +24194,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095841353}
   m_CullTransparentMesh: 1
+--- !u!114 &1095841357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095841353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1097322613
 GameObject:
   m_ObjectHideFlags: 0
@@ -26623,7 +26603,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1095841355}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: PreviousIndex
         m_Mode: 1
@@ -29542,7 +29522,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1095841355}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: NextIndex
         m_Mode: 1
@@ -31331,7 +31311,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 595416880}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: NextIndex
         m_Mode: 1
@@ -37830,7 +37810,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2094138682}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: NextIndex
         m_Mode: 1
@@ -41629,7 +41609,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 869079753}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: NextIndex
         m_Mode: 1
@@ -42300,7 +42280,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 608598772}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: NextIndex
         m_Mode: 1
@@ -45187,7 +45167,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 336010721}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: PreviousIndex
         m_Mode: 1
@@ -47930,7 +47910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2094138681}
   - component: {fileID: 2094138683}
-  - component: {fileID: 2094138682}
+  - component: {fileID: 2094138684}
   m_Layer: 5
   m_Name: Item (10)
   m_TagString: Untagged
@@ -47957,27 +47937,11 @@ RectTransform:
   - {fileID: 1707368547}
   m_Father: {fileID: 104098579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 146.55072, y: 0}
+  m_SizeDelta: {x: 285.5, y: 202.8}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &2094138682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094138680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 995082090f657ad4c9f848d7d14d8cf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hiraganaTMP: {fileID: 1790055886}
-  indexTMP: {fileID: 544008577}
-  itemData: {fileID: 0}
-  itemIndex: 0
 --- !u!222 &2094138683
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47986,6 +47950,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094138680}
   m_CullTransparentMesh: 1
+--- !u!114 &2094138684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094138680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2096940189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48178,7 +48154,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2094138682}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: HiraganaArrangeItem, Assembly-CSharp
         m_MethodName: PreviousIndex
         m_Mode: 1
