@@ -7592,6 +7592,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answer: {fileID: 0}
+  translate: {fileID: 0}
+  index: {fileID: 0}
+  currentIndex: 0
 --- !u!1001 &337448433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13950,6 +13954,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answer: {fileID: 0}
+  translate: {fileID: 0}
+  index: {fileID: 0}
+  currentIndex: 0
 --- !u!1001 &598323058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14252,6 +14260,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answer: {fileID: 0}
+  translate: {fileID: 0}
+  index: {fileID: 0}
+  currentIndex: 0
 --- !u!1001 &615558674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18781,6 +18793,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answer: {fileID: 0}
+  translate: {fileID: 0}
+  index: {fileID: 0}
+  currentIndex: 0
 --- !u!1001 &869792586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24206,6 +24222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answer: {fileID: 0}
+  translate: {fileID: 0}
+  index: {fileID: 0}
+  currentIndex: 0
 --- !u!1 &1097322613
 GameObject:
   m_ObjectHideFlags: 0
@@ -32540,6 +32560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1461577808}
   - component: {fileID: 1461577807}
+  - component: {fileID: 1461577809}
   m_Layer: 0
   m_Name: GameplayController
   m_TagString: Untagged
@@ -32581,6 +32602,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1461577809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461577806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04d4e5f559222f4abb45e6b7beb2a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userData: {fileID: 11400000, guid: 2da16ff9c265619478b9956d1ec2058d, type: 2}
+  answerItems:
+  - {fileID: 2094138684}
+  - {fileID: 608598774}
+  - {fileID: 336010723}
+  - {fileID: 1095841357}
+  - {fileID: 595416882}
+  - {fileID: 869079755}
+  questionPanel: {fileID: 61170845}
+  gameplayPanel: {fileID: 1350360013}
+  objectives: {fileID: 1229055647}
+  currentData: {fileID: 0}
+  currentObjectives: 0
 --- !u!1001 &1467325849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47962,6 +48008,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0565da353a722d45b1fd872d05d6a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  answer: {fileID: 0}
+  translate: {fileID: 0}
+  index: {fileID: 0}
+  currentIndex: 0
 --- !u!1001 &2096940189
 PrefabInstance:
   m_ObjectHideFlags: 0
