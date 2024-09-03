@@ -23,6 +23,8 @@ public class SentenceArrangeItem : MonoBehaviour
         this.answer.text = answer;
         this.translate.text = translate;
         currentIndex = 1;
+
+        index.text = currentIndex.ToString();
     }
 
     public void NextBtn()

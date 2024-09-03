@@ -6,6 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/000 - KasubayCodeQuest/000 - Scene/Persistent.unity
+    guid: af877b9b06991f848a5ad5d8804b7722
+  - enabled: 1
+    path: Assets/000 - KasubayCodeQuest/000 - Scene/MainMenu.unity
+    guid: fff8ef3d24b89f84d8e4d62ee9964965
+  - enabled: 1
+    path: Assets/000 - KasubayCodeQuest/000 - Scene/School.unity
+    guid: a158eaffe800b144f817e535fc231cef
+  - enabled: 1
+    path: Assets/000 - KasubayCodeQuest/000 - Scene/Stage1.unity
+    guid: daec0e4cc7356a54b994009d76addd78
+  - enabled: 1
+    path: Assets/000 - KasubayCodeQuest/000 - Scene/Stage2.unity
+    guid: a2803637c3388824e8fa6b6083ce88e3
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

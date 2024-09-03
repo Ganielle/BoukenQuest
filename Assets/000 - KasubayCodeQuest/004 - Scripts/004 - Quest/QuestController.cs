@@ -40,4 +40,9 @@ public class QuestController : MonoBehaviour
 
     [Header("DEBUGGER")]
     [SerializeField] private int questIndex;
+
+    private void OnEnable()
+    {
+        GameManager.Instance.SceneController.ActionPass = true;
+    }
 }

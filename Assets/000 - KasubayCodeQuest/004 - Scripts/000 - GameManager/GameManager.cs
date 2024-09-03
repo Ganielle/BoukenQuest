@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     [Header("DONT DESTROY ON LOAD")]
     [SerializeField] private List<GameObject> dontDestroyOnLoadList;
 
+    [field: Header("CAMERAS")]
+    [field: SerializeField] public Camera MainCamera { get; private set; }
+    [field: SerializeField] public Camera UICamera { get; private set; }
+
     [field: Header("SCRIPT REFERENCES")]
     [field: SerializeField] public SceneController SceneController { get; private set; }
 

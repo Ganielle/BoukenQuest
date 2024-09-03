@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform cameraTransform;  // Reference to the camera
 
     [Header("PLAYER MOVEMENTS")]
+    [SerializeField] private bool canJump;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float jumpStrength;
@@ -82,6 +83,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyGravity()
     {
+        if (!canJump)
+        {
+            velocity = -1f;
+            return;
+        }
         if (IsGrounded() && velocity < 0.0f)
         {
             velocity = -1.0f;
