@@ -143,7 +143,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4287f55f-3b8d-4fb2-9e0c-285c64657f86"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Android"",
@@ -249,6 +249,15 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""c07b2ca3-e5f4-409f-b99f-778eb16c6f98"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -317,6 +326,28 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9e395c28-3bd3-4d46-a912-f01c4c27c8fb"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Android"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3d1b37e0-e297-4ed1-a46a-a361e5542909"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PC"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -363,6 +394,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
         m_StageOne_Left = m_StageOne.FindAction("Left", throwIfNotFound: true);
         m_StageOne_Right = m_StageOne.FindAction("Right", throwIfNotFound: true);
         m_StageOne_Jump = m_StageOne.FindAction("Jump", throwIfNotFound: true);
+        m_StageOne_Interact = m_StageOne.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -505,6 +537,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_StageOne_Left;
     private readonly InputAction m_StageOne_Right;
     private readonly InputAction m_StageOne_Jump;
+    private readonly InputAction m_StageOne_Interact;
     public struct StageOneActions
     {
         private @GameControls m_Wrapper;
@@ -512,6 +545,7 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
         public InputAction @Left => m_Wrapper.m_StageOne_Left;
         public InputAction @Right => m_Wrapper.m_StageOne_Right;
         public InputAction @Jump => m_Wrapper.m_StageOne_Jump;
+        public InputAction @Interact => m_Wrapper.m_StageOne_Interact;
         public InputActionMap Get() { return m_Wrapper.m_StageOne; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -530,6 +564,9 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
         private void UnregisterCallbacks(IStageOneActions instance)
@@ -543,6 +580,9 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
         public void RemoveCallbacks(IStageOneActions instance)
@@ -591,5 +631,6 @@ public partial class @GameControls: IInputActionCollection2, IDisposable
         void OnLeft(InputAction.CallbackContext context);
         void OnRight(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }

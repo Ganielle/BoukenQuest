@@ -5486,7 +5486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ControlPath: <Gamepad>/buttonSouth
+  m_ControlPath: <Gamepad>/buttonEast
 --- !u!114 &119824290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15689,6 +15689,7 @@ MonoBehaviour:
   <MovementDirection>k__BackingField: {x: 0, y: 0}
   <LookDirection>k__BackingField: {x: 0, y: 0}
   <Interact>k__BackingField: 0
+  <IsJump>k__BackingField: 0
   <Pause>k__BackingField: 0
   <Disable>k__BackingField: 0
   activeTouchCount: 0
@@ -29389,6 +29390,8 @@ MonoBehaviour:
   cameraTransform: {fileID: 216409090}
   moveSpeed: 5
   gravity: -9.8
+  jumpStrength: 0
+  gravityMultiplier: 0
   rotationSmoothTime: 0.05
   playerAnimator: {fileID: 7638631390023845280}
   moveDirection: {x: 0, y: 0, z: 0}
@@ -29396,6 +29399,7 @@ MonoBehaviour:
   angle: 0
   cameraangle: 0
   currentVelocity: 0
+  velocity: 0
 --- !u!4 &681608438
 Transform:
   m_ObjectHideFlags: 0
