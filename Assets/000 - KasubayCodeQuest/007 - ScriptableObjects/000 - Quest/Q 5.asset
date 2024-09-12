@@ -20,7 +20,5 @@ MonoBehaviour:
     dialogue: {fileID: 11400000, guid: 6d39d7a1257f7924d936d92cfb8c4328, type: 2}
   - characterName: Yuki
     dialogue: {fileID: 11400000, guid: f5becf2cf21f44e45a3e68fd048db6b2, type: 2}
-  <Positions>k__BackingField:
-  - characterName: Ms.Hamada
-    position: {x: 2.46, y: 3.56, z: 35.65}
-    rotation: {x: 0, y: 87.396, z: 0}
+  <Positions>k__BackingField: []
+  <QuestName>k__BackingField: Learn the first lesson "Hiragana"

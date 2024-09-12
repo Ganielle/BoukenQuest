@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Q 2
   m_EditorClassIdentifier: 
   <QuestID>k__BackingField: 002
+  <Item>k__BackingField:
+    itemID: 
   <Dialouges>k__BackingField:
   - characterName: Ms.Hamada
     dialogue: {fileID: 11400000, guid: c44d222d64870d243bad2c6523a95e5c, type: 2}
   - characterName: Yuki
     dialogue: {fileID: 11400000, guid: 43ab46142fcdec34da94ede97e6d4913, type: 2}
+  <Positions>k__BackingField: []
+  <QuestName>k__BackingField: Talk to Ms. Hamada (located at 1st floor main building)

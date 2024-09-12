@@ -10,6 +10,7 @@ public class QuestData : ScriptableObject
     [field: SerializeField] public ItemQuest Item { get; private set; }
     [field: SerializeField] public List<Dialouges> Dialouges { get; private set; }
     [field: SerializeField] public List<QuestPosition> Positions { get; private set; }
+    [field: SerializeField] public string QuestName { get; private set; }
 }
 
 [Serializable]

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerCameraController : MonoBehaviour
 {
+    [SerializeField] private UserData userData;
+
     [Header("References")]
     [SerializeField] private GamePlayerController playerControls;
     [SerializeField] private GameObject target;
 
     [Header("Parameters")]
-    [SerializeField] private float sensitivity;
+    [SerializeField] private float maxCameraSensitivity;
     [SerializeField] private float topClamp;
     [SerializeField] private float bottomClamp;
     [SerializeField] private float cameraAngleOverride;
@@ -18,10 +20,12 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] private float _threshold;
     [SerializeField] private float _cinemachineTargetYaw;
     [SerializeField] private float _cinemachineTargetPitch;
+    [SerializeField] private float currentCameraSensitivity;
 
     private void Start()
     {
         _threshold = 0.10f;
+        currentCameraSensitivity = maxCameraSensitivity * userData.CameraSensitivity;
     }
 
     private void LateUpdate()
@@ -33,8 +37,8 @@ public class PlayerCameraController : MonoBehaviour
     {
         if (playerControls.LookDirection.sqrMagnitude >= _threshold)
         {
-            _cinemachineTargetYaw += playerControls.LookDirection.x * sensitivity;
-            _cinemachineTargetPitch += -playerControls.LookDirection.y * sensitivity;
+            _cinemachineTargetYaw += playerControls.LookDirection.x * currentCameraSensitivity;
+            _cinemachineTargetPitch += -playerControls.LookDirection.y * currentCameraSensitivity;
         }
 
         _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);

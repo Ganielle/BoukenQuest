@@ -22,9 +22,6 @@ public class GamePlayerController : MonoBehaviour
     [field: SerializeField] public bool Pause { get; private set; }
     [field: SerializeField] public bool Disable { get; set; }
 
-    [SerializeField] private TouchData[] activeTouches = new TouchData[10];  // Predefined array for a maximum of 10 touches
-    [SerializeField] private int activeTouchCount = 0;
-
     //  ====================
 
     GameControls gameControls;
@@ -44,11 +41,8 @@ public class GamePlayerController : MonoBehaviour
         gameControls.School.Pause.canceled += _ => PauseStop();
         gameControls.School.Jump.started += _ => JumpStart();
         gameControls.School.Jump.canceled += _ => JumpStop();
-
-#if !UNITY_ANDROID
         gameControls.School.Look.performed += _ => LookStart();
         gameControls.School.Look.canceled += _ => LookStop();
-#endif
     }
 
     private void OnDisable()
@@ -61,21 +55,10 @@ public class GamePlayerController : MonoBehaviour
         gameControls.School.Pause.canceled -= _ => PauseStop();
         gameControls.School.Jump.started -= _ => JumpStart();
         gameControls.School.Jump.canceled -= _ => JumpStop();
-
-
-#if !UNITY_ANDROID
         gameControls.School.Look.performed -= _ => LookStart();
         gameControls.School.Look.canceled -= _ => LookStop();
-#endif
 
         gameControls.Disable();
-    }
-
-    private void Update()
-    {
-#if UNITY_ANDROID
-        MobileLookStart();
-#endif
     }
 
     private void LookStart()
@@ -165,92 +148,5 @@ public class GamePlayerController : MonoBehaviour
     public void JumpForceStop()
     {
         IsJump = false;
-    }
-
-    private void MobileLookStart()
-    {
-        if (Disable)
-        {
-            LookDirection = Vector2.zero;
-            activeTouchCount = 0;
-            return;
-        }
-
-        int touchCount = Touchscreen.current.touches.Count;
-
-        for (int i = 0; i < touchCount; i++)
-        {
-            var touch = Touchscreen.current.touches[i];
-            int touchId = touch.touchId.ReadValue();
-            UnityEngine.InputSystem.TouchPhase touchPhase = touch.phase.ReadValue();
-
-            switch (touchPhase)
-            {
-                case UnityEngine.InputSystem.TouchPhase.Began:
-                    {
-                        // Check if the touch is already in the activeTouches array
-                        bool isAlreadyActive = false;
-                        for (int j = 0; j < activeTouchCount; j++)
-                        {
-                            if (activeTouches[j].touchId == touchId)
-                            {
-                                isAlreadyActive = true;
-                                break;
-                            }
-                        }
-
-                        // If the touch is new, add it to the activeTouches array
-                        if (!isAlreadyActive)
-                        {
-                            bool isOverUI = EventSystem.current.IsPointerOverGameObject(touchId);
-
-                            activeTouches[activeTouchCount] = new TouchData { touchId = touchId, isOverUI = isOverUI };
-                            activeTouchCount++;
-                        }
-                        break;
-                    }
-
-                case UnityEngine.InputSystem.TouchPhase.Ended:
-                case UnityEngine.InputSystem.TouchPhase.Canceled:
-                    {
-                        // Remove the touch by shifting the array
-                        for (int j = 0; j < activeTouchCount; j++)
-                        {
-                            if (activeTouches[j].touchId == touchId)
-                            {
-                                // Shift all elements after the removed one to the left
-                                for (int k = j; k < activeTouchCount - 1; k++)
-                                {
-                                    activeTouches[k] = activeTouches[k + 1];
-                                }
-                                activeTouchCount--;
-                                break;
-                            }
-                        }
-
-                        // Reset LookDirection if no active touches are left
-                        if (activeTouchCount == 0)
-                        {
-                            LookDirection = Vector2.zero;
-                        }
-                        break;
-                    }
-
-                case UnityEngine.InputSystem.TouchPhase.Moved:
-                case UnityEngine.InputSystem.TouchPhase.Stationary:
-                    {
-                        // Process active touches
-                        for (int j = 0; j < activeTouchCount; j++)
-                        {
-                            if (activeTouches[j].touchId == touchId && !activeTouches[j].isOverUI)
-                            {
-                                LookDirection += touch.delta.ReadValue();
-                                break;
-                            }
-                        }
-                        break;
-                    }
-            }
-        }
     }
 }

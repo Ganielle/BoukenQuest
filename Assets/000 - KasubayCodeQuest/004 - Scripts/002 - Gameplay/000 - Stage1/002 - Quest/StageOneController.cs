@@ -25,6 +25,8 @@ public class StageOneController : MonoBehaviour
         CheckHealth();
         currentTime = startTime;
         userData.OnHealhChange += HealthChange;
+
+        GameManager.Instance.SceneController.ActionPass = true;
     }
 
     private void OnDisable()

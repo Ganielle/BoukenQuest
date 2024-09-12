@@ -28,11 +28,33 @@ public class UserData : ScriptableObject
         }
     }
 
+    public float CameraSensitivity
+    {
+        get => currentCameraSensitivity;
+        set
+        {
+            currentCameraSensitivity = value;
+            PlayerPrefs.SetFloat("CameraSensitivity", currentCameraSensitivity);
+        }
+    }
+
     [Header("DEBUGGER")]
     [SerializeField] private float currentHealth;
+
+    [Space]
+    [SerializeField] private float currentCameraSensitivity;
 
     private void OnEnable()
     {
         CurrentHealth = 100f;
+        CheckCameraSensitivity();
+    }
+
+    private void CheckCameraSensitivity()
+    {
+        if (PlayerPrefs.HasKey("CameraSensitivity"))
+            currentCameraSensitivity = PlayerPrefs.GetFloat("CameraSensitivity");
+        else
+            CameraSensitivity = 0.2f;
     }
 }

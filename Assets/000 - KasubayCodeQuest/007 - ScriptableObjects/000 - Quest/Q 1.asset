@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Q 1
   m_EditorClassIdentifier: 
   <QuestID>k__BackingField: 001
+  <Item>k__BackingField:
+    itemID: 
   <Dialouges>k__BackingField:
   - characterName: Ms.Hamada
     dialogue: {fileID: 11400000, guid: 6dc22ab3d76c51844b5ad23156665c21, type: 2}
   - characterName: Yuki
     dialogue: {fileID: 11400000, guid: 963fba28da8e7e348b17ab2bf64d1f22, type: 2}
+  <Positions>k__BackingField: []
+  <QuestName>k__BackingField: Talk to Yuki about your situation

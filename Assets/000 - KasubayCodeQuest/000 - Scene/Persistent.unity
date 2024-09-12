@@ -458,7 +458,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1339,6 +1339,7 @@ MonoBehaviour:
   - {fileID: 1284910327}
   - {fileID: 2108583047}
   - {fileID: 155625889}
+  - {fileID: 1192094826}
   <MainCamera>k__BackingField: {fileID: 1284910329}
   <UICamera>k__BackingField: {fileID: 1702265338}
   <SceneController>k__BackingField: {fileID: 1802643099}

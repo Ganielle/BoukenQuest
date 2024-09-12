@@ -13,6 +13,10 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Button interactionButton;
 
     [Space]
+    [SerializeField] private bool isLesson;
+    [SerializeField] private GameObject lessonObj;
+
+    [Space]
     [SerializeField] private NPCQuestController npcQuestController;
     [SerializeField] private QuestController questController;
     [SerializeField] private GamePlayerController playerControls;
@@ -66,12 +70,22 @@ public class DialogueController : MonoBehaviour
 
     public void Initialize()
     {
+        if (isLesson)
+        {
+            gameplayUIObj.SetActive(false);
+            lessonObj.SetActive(true);
+            return;
+        }
+
         this.finalAction = () =>
         {
             int tempquestindex = questController.QuestIndex + 1;
 
             if (!isItem)
             {
+                if (showText != null)
+                    StopCoroutine(showText);
+
                 Vector3 tempquestposition = questController.QuestList[tempquestindex].Positions.Find(e => e.characterName == characterName).position;
                 Vector3 temprotation = questController.QuestList[tempquestindex].Positions.Find(e => e.characterName == characterName).rotation;
 
@@ -108,6 +122,9 @@ public class DialogueController : MonoBehaviour
             }
             else
             {
+                if (showText != null)
+                    StopCoroutine(showText);
+
                 interactionButton.interactable = false;
                 interactionButton.onClick.RemoveAllListeners();
 
@@ -165,6 +182,9 @@ public class DialogueController : MonoBehaviour
     {
         if (currentDialogueIndex >= dialogues.dialogueSequence.Count - 1)
         {
+            if (showText != null)
+                StopCoroutine(showText);
+
             dialogueObj.SetActive(false);
 
             characterNameTMP.text = "";

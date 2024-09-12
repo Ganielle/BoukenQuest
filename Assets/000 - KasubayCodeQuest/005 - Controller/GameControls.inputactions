@@ -175,6 +175,17 @@
                 },
                 {
                     "name": "",
+                    "id": "6708f063-0003-442c-b53a-98e1f1b847a1",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Android",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9a2b03cd-5f20-4888-bb3e-ab51b3143de8",
                     "path": "<Keyboard>/space",
                     "interactions": "",
