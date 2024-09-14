@@ -119,6 +119,7 @@
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\UserData.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralUISpace.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\SchoolSceneData.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Framework\LeanTween.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\002 - Quest\StageOneQuestItem.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\001 - Controller\GamePlayerController.cs" />
