@@ -66,6 +66,15 @@ public class DialogueController : MonoBehaviour
     private void CheckQuest()
     {
         dialogues = questController.QuestList[questController.QuestIndex].Dialouges.Find(e => e.characterName == characterName).dialogue;
+
+        if (questController.QuestList[questController.QuestIndex].Positions.Exists(e => e.characterName == characterName))
+        {
+            Vector3 tempquestposition = questController.QuestList[questController.QuestIndex].Positions.Find(e => e.characterName == characterName).position;
+            Vector3 temprotation = questController.QuestList[questController.QuestIndex].Positions.Find(e => e.characterName == characterName).rotation;
+
+            transform.position = tempquestposition;
+            transform.rotation = Quaternion.Euler(temprotation);
+        }
     }
 
     public void Initialize()
@@ -85,6 +94,14 @@ public class DialogueController : MonoBehaviour
             {
                 if (showText != null)
                     StopCoroutine(showText);
+
+                if (!npcQuestController.CheckIfThisIsQuest())
+                {
+                    blackPanel.gameObject.SetActive(false);
+                    gameplayUIObj.SetActive(true);
+                    playerControls.Disable = false;
+                    return;
+                }
 
                 Vector3 tempquestposition = questController.QuestList[tempquestindex].Positions.Find(e => e.characterName == characterName).position;
                 Vector3 temprotation = questController.QuestList[tempquestindex].Positions.Find(e => e.characterName == characterName).rotation;

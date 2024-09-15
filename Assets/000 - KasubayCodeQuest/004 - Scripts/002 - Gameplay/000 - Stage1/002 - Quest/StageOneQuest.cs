@@ -144,6 +144,7 @@ public class StageOneQuest : MonoBehaviour
         {
             arrangementQuestObj.SetActive(false);
             gameplayObj.SetActive(true);
+            teleporterObj.SetActive(true);
         }
     }
 }

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b437420aab5ca4e94d84da2829e665, type: 3}
+  m_Name: Q 7
+  m_EditorClassIdentifier: 
+  <QuestID>k__BackingField: 007
+  <Item>k__BackingField:
+    itemID: 
+  <Dialouges>k__BackingField:
+  - characterName: Ms.Hamada
+    dialogue: {fileID: 11400000, guid: 6039caccfcdbcfb44925daa72dc34aa2, type: 2}
+  - characterName: Yuki
+    dialogue: {fileID: 11400000, guid: f5becf2cf21f44e45a3e68fd048db6b2, type: 2}
+  <Positions>k__BackingField:
+  - characterName: Ms.Hamada
+    position: {x: 2.46, y: 3.56, z: 35.65}
+    rotation: {x: 0, y: 87.396, z: 0}
+  <QuestName>k__BackingField: Go to room A1 and read the lesson on the blackboard

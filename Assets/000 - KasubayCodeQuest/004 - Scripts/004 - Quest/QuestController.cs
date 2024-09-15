@@ -37,7 +37,9 @@ public class QuestController : MonoBehaviour
 
     //  =======================
 
+    [SerializeField] private SchoolSceneData schoolSceneData;
     [SerializeField] private TextMeshProUGUI questTMP;
+    [SerializeField] private Transform player;
     [SerializeField] private List<QuestData> questDatas;
 
     [Header("DEBUGGER")]
@@ -45,8 +47,11 @@ public class QuestController : MonoBehaviour
 
     private void OnEnable()
     {
-        questTMP.text = questDatas[questIndex].QuestName;
         OnQuestIndexChange += QuestChange;
+        QuestIndex = schoolSceneData.QuestIndex;
+        questTMP.text = questDatas[questIndex].QuestName;
+        player.transform.position = schoolSceneData.PlayerOldPosition;
+        player.transform.rotation = Quaternion.Euler(schoolSceneData.PlayerOldRotation);
         GameManager.Instance.SceneController.ActionPass = true;
     }
 
@@ -64,10 +69,20 @@ public class QuestController : MonoBehaviour
     {
         if (tempQuestIndex == questIndex) return;
 
+        if (questIndex > tempQuestIndex) return;
+
         QuestIndex++;
+        schoolSceneData.QuestIndex = QuestIndex;
     }
 
     public void ChangeScene(string sceneName) => GameManager.Instance.SceneController.CurrentScene = sceneName;
+
+    public void SetPlayerQuestDataTemp()
+    {
+        schoolSceneData.QuestIndex = QuestIndex;
+        schoolSceneData.PlayerOldPosition = player.transform.position;
+        schoolSceneData.PlayerOldRotation = new Vector3(player.transform.rotation.x, player.transform.rotation.y, player.transform.rotation.z);
+    }
 
     public void QuitGame()
     {

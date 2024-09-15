@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
+    [SerializeField] private SchoolSceneData schoolSceneData;
+
     [Header("ENTER YOUR NAME")]
     [SerializeField] private TMP_InputField usernameTMP;
     [SerializeField] private GameObject nextBtn;
@@ -28,8 +30,10 @@ public class MainMenuController : MonoBehaviour
 
     public void StartGame()
     {
+        schoolSceneData.ResetQuestData();
         GameManager.Instance.SceneController.CurrentScene = "School";
     }
+
 
     public void QuitGame()
     {

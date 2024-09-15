@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class StageOneController : MonoBehaviour
 {
     [SerializeField] private UserData userData;
+    [SerializeField] private SchoolSceneData schoolSceneData;
     [SerializeField] private PlayerDeath playerDeath;
     [SerializeField] private Slider healthSlider;
     [SerializeField] private CanvasGroup gameOverCG;
@@ -19,12 +20,16 @@ public class StageOneController : MonoBehaviour
 
     [Header("DEBUGGER")]
     [SerializeField] private float currentTime;
+    [SerializeField] private float temphealth;
+    [SerializeField] private bool startGame;
 
     private void OnEnable()
     {
+        temphealth = userData.CurrentHealth;
         CheckHealth();
         currentTime = startTime;
         userData.OnHealhChange += HealthChange;
+        startGame = true;
 
         GameManager.Instance.SceneController.ActionPass = true;
     }
@@ -36,15 +41,25 @@ public class StageOneController : MonoBehaviour
 
     private void Update()
     {
-        if (currentTime > 0f)
+        if (startGame)
         {
-            currentTime -= Time.deltaTime;
+            if (currentTime > 0f)
+            {
+                currentTime -= Time.deltaTime;
 
-            int minutes = (int)currentTime / 60;
-            int seconds = (int)currentTime % 60;
+                int minutes = (int)currentTime / 60;
+                int seconds = (int)currentTime % 60;
 
-            timer.text = $"{minutes:D2} : {seconds:D2}";
-            hiraganaTimer.text = $"Time left: {minutes:D2} : {seconds:D2}";
+                timer.text = $"{minutes:D2} : {seconds:D2}";
+                hiraganaTimer.text = $"Time left: {minutes:D2} : {seconds:D2}";
+            }
+            else
+            {
+                if (!gameOverCG.gameObject.activeInHierarchy)
+                {
+                    GameOver();
+                }
+            }
         }
     }
 
@@ -63,11 +78,37 @@ public class StageOneController : MonoBehaviour
         }
     }
 
+    public void ResumeWorldTime(bool value)
+    {
+        if (value)
+            Time.timeScale = 1f;
+        else
+            Time.timeScale = 0f;
+    }
+
     public void GameOver()
     {
         Time.timeScale = 0f;
         gameOverCG.alpha = 0f;
         gameOverCG.gameObject.SetActive(true);
         LeanTween.alphaCanvas(gameOverCG, 1f, 0.25f).setEase(LeanTweenType.easeInOutSine);
+    }
+
+    public void Restart()
+    {
+        userData.CurrentHealth = temphealth;
+        GameManager.Instance.SceneController.RestartScene();
+    }
+
+    public void ReturnToSchoolDead()
+    {
+        userData.CurrentHealth = temphealth;
+        GameManager.Instance.SceneController.CurrentScene = "School";
+    }
+
+    public void ReturnToSchoolSuccess()
+    {
+        schoolSceneData.QuestIndex++;
+        GameManager.Instance.SceneController.CurrentScene = "School";
     }
 }

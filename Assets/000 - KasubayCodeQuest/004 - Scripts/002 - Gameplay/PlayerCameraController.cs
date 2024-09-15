@@ -25,7 +25,6 @@ public class PlayerCameraController : MonoBehaviour
     private void Start()
     {
         _threshold = 0.10f;
-        currentCameraSensitivity = maxCameraSensitivity * userData.CameraSensitivity;
     }
 
     private void LateUpdate()
@@ -35,6 +34,8 @@ public class PlayerCameraController : MonoBehaviour
 
     private void HandleCameraInput()
     {
+        currentCameraSensitivity = maxCameraSensitivity * userData.CameraSensitivity;
+
         if (playerControls.LookDirection.sqrMagnitude >= _threshold)
         {
             _cinemachineTargetYaw += playerControls.LookDirection.x * currentCameraSensitivity;

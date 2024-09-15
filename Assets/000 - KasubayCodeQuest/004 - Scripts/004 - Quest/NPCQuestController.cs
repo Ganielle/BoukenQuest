@@ -50,6 +50,8 @@ public class NPCQuestController : MonoBehaviour
         }
     }
 
+    public bool CheckIfThisIsQuest() => QuestList.Contains(questController.QuestList[questController.QuestIndex].QuestID);
+
     public void ProgressQuest()
     {
         if (!QuestList.Contains(questController.QuestList[questController.QuestIndex].QuestID)) return;

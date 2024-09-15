@@ -47523,6 +47523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4da0aa4791c5d343975ba22134f8672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  schoolSceneData: {fileID: 11400000, guid: 9a110cc76f1a03a4790febad276828c5, type: 2}
   usernameTMP: {fileID: 908596403}
   nextBtn: {fileID: 286305303}
 --- !u!114 &1030693719

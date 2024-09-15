@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,17 @@ public class MapButtonController : MonoBehaviour
     [SerializeField] private Button mapBtn;
 
     private void OnEnable()
+    {
+        questController.OnQuestIndexChange += QuestChange;
+        CheckMapQuest();
+    }
+
+    private void OnDisable()
+    {
+        questController.OnQuestIndexChange -= QuestChange;
+    }
+
+    private void QuestChange(object sender, EventArgs e)
     {
         CheckMapQuest();
     }

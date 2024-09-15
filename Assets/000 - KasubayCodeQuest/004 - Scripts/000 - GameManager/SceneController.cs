@@ -88,6 +88,11 @@ public class SceneController : MonoBehaviour
          StartCoroutine(Loading());
     }
 
+    public void RestartScene()
+    {
+        StartCoroutine(Loading());
+    }
+
     public IEnumerator Loading()
     {
         Debug.Log("local loading");
