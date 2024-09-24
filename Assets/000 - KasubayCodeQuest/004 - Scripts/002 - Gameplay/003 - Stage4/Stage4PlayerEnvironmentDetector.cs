@@ -1,0 +1,81 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Stage4PlayerEnvironmentDetector : MonoBehaviour
+{
+    [SerializeField] private GamePlayerController playerController;
+    [SerializeField] private Button interactBtn;
+
+    [Space]
+    [SerializeField] private GameObject answerPanelObj;
+    [SerializeField] private TextMeshProUGUI answerTMP;
+
+    [Space]
+    [SerializeField] private GameObject questionPanelObj;
+    [SerializeField] private TextMeshProUGUI questionTMP;
+
+    [Space]
+    [SerializeField] private GameObject gameplayObj;
+    [SerializeField] private GameObject winObj;
+
+    [Header("DEBUGGER")]
+    [SerializeField] private Stage4AnswerItem stage4AnswerItem;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("QuestionQuest"))
+        {
+            stage4AnswerItem = other.GetComponent<Stage4AnswerItem>();
+            answerTMP.text = stage4AnswerItem.answer;
+            answerPanelObj.SetActive(true);
+        }
+        else if (other.CompareTag("Stage4Question"))
+        {
+            questionTMP.text = other.GetComponent<Stage4QuestionItem>().question;
+            questionPanelObj.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("QuestionQuest"))
+        {
+            stage4AnswerItem = null;
+            answerPanelObj.SetActive(false);
+            answerTMP.text = "";
+        }
+        else if (other.CompareTag("Stage4Question"))
+        {
+            questionPanelObj.SetActive(false);
+            questionTMP.text = "";
+        }
+        else if (other.CompareTag("Teleporter"))
+        {
+            Time.timeScale = 0f;
+            winObj.SetActive(true);
+            gameplayObj.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        if (playerController.Interact)
+        {
+            if (stage4AnswerItem == null) return;
+
+            stage4AnswerItem.CheckAnswer();
+
+            stage4AnswerItem = null;
+            answerPanelObj.SetActive(false);
+            answerTMP.text = "";
+
+            playerController.InteractTurnOff();
+        }
+
+        if (stage4AnswerItem != null) interactBtn.interactable = true;
+        else interactBtn.interactable = false;
+    }
+}
