@@ -130,6 +130,7 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\004 - Quest\ItemQuestData.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\002 - Quest\HiraganaArrangeItem.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\GameManager.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\002 - Stage3\Stage3QuestionData.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingColorTweening.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingRotate.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralSequencer.cs" />
