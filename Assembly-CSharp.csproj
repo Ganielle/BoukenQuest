@@ -65,6 +65,7 @@
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Framework\LeanSmooth.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\000 - Puzzle\SinglePuzzleMove.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\PathSplineEndless.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleSystemController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\PerformanceTests.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralBasics2d.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\004 - Quest\NPCQuestController.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\LevelItemController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\003 - Stage4\Stage4QuestionData.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - MainMenu\MainMenuController.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleAttackController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\PlayerDeath.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\PlayerCameraController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingIssue.cs" />
@@ -138,15 +140,19 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\002 - Quest\HiraganaArrangeItem.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\GameManager.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\002 - Stage3\Stage3QuestionData.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\QuestionData.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\002 - Stage3\Stage3AnswerItem.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingColorTweening.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingRotate.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralSequencer.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleUIBtnController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\003 - Dialogue\DialogueController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\Testing246.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralBasic.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\PlayerWin.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleAnswerItem.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleCharacterController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\Testing243.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\001 - Platform\CollapsingPlatform.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingSequencer.cs" />
