@@ -30,12 +30,17 @@ public class BattleSystemController : MonoBehaviour
 
     //  ========================
 
+    [SerializeField] private UserData userData;
+    [SerializeField] private SchoolSceneData schoolSceneData;
+
+    [Space]
     [SerializeField] private List<QuestionData> questionList;
     [SerializeField] private List<GameObject> enemyList;
     [SerializeField] private List<Animator> enemyAnimators;
     [SerializeField] private List<ParticleSystem> enemyParticleSystem;
 
     [Space]
+    [SerializeField] private GameObject instructionObj;
     [SerializeField] private GameObject gameOverObj;
     [SerializeField] private GameObject winObj;
 
@@ -46,7 +51,6 @@ public class BattleSystemController : MonoBehaviour
     [SerializeField] private Slider playerHealthSlider;
 
     [Header("PANELS")]
-    [SerializeField] private GameObject commandsObj;
     [SerializeField] private GameObject questionObj;
     [SerializeField] private GameObject answersObj;
     [SerializeField] private GameObject viewCodeObj;
@@ -67,11 +71,12 @@ public class BattleSystemController : MonoBehaviour
     [SerializeField] private int currentBattleIndex;
     [SerializeField] private BattleAnswerItem playerAnswer;
     [SerializeField] private float playerCurrentHealth;
+    [SerializeField] private float tempCurrentHealh;
 
     private void OnEnable()
     {
-        StartCoroutine(StartSetupCurrentBattle(2.5f));
-        playerCurrentHealth = 100;
+        tempCurrentHealh = userData.CurrentHealth;
+        playerCurrentHealth = userData.CurrentHealth;
         OnBattleAnswerChange += PlayerAnswerChange;
         GameManager.Instance.SceneController.ActionPass = true;
     }
@@ -90,15 +95,34 @@ public class BattleSystemController : MonoBehaviour
     {
         choicesPanelObj.SetActive(false);
         questionObj.SetActive(false);
-        commandsObj.SetActive(false);
         answersObj.SetActive(false);
         viewCodeObj.SetActive(false);
         codeObj.SetActive(false);
     }
 
-    public void RestartScene() => GameManager.Instance.SceneController.RestartScene();
+    public void StartGame()
+    {
+        StartCoroutine(StartSetupCurrentBattle(0f));
+    }
 
-    public void ReturnMenu() => GameManager.Instance.SceneController.CurrentScene = "MainMenu";
+
+    public void RestartScene()
+    {
+        userData.CurrentHealth = tempCurrentHealh;
+        GameManager.Instance.SceneController.RestartScene();
+    }
+
+    public void ReturnSchoolGameOver()
+    {
+        userData.CurrentHealth = tempCurrentHealh;
+        GameManager.Instance.SceneController.CurrentScene = "School";
+    }
+
+    public void ReturnSchoolWin()
+    {
+        schoolSceneData.QuestIndex++;
+        GameManager.Instance.SceneController.CurrentScene = "School";
+    }
 
     public void NextEnemy()
     {
@@ -124,8 +148,9 @@ public class BattleSystemController : MonoBehaviour
 
         yield return new WaitForSeconds(waitTime);
 
-        commandsObj.SetActive(true);
+        questionObj.SetActive(true);
         choicesPanelObj.SetActive(true);
+        answersObj.SetActive(true);
     }
 
     private void SetupQuestion()
@@ -177,7 +202,8 @@ public class BattleSystemController : MonoBehaviour
 
     public void NexPhaseEnemyToPlayer()
     {
-        playerCurrentHealth -= 25;
+        playerCurrentHealth -= 34;
+        userData.CurrentHealth = playerCurrentHealth;
 
         playerHealthSlider.value = playerCurrentHealth / 100;
 
