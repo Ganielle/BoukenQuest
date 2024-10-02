@@ -17,6 +17,9 @@ public class SentencesController : MonoBehaviour
     [SerializeField] private Button interactBtn;
 
     [Space]
+    [SerializeField] private AudioClip backgroundMusicClip;
+
+    [Space]
     [SerializeField] private List<SentenceArrangeItem> answerItems;
     [SerializeField] private GameObject questionPanel;
     [SerializeField] private GameObject gameplayPanel;
@@ -36,6 +39,7 @@ public class SentencesController : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.Instance.SoundManager.SetBGMusic(backgroundMusicClip);
         temphealth = userData.CurrentHealth;
         CheckHealth();
         currentTime = startTime;

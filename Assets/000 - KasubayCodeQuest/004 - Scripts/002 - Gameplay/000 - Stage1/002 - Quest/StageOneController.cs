@@ -13,6 +13,9 @@ public class StageOneController : MonoBehaviour
     [SerializeField] private Slider healthSlider;
     [SerializeField] private CanvasGroup gameOverCG;
 
+    [Space]
+    [SerializeField] private AudioClip backgroundMusicClip;
+
     [Header("TIMER")]
     [SerializeField] private float startTime;
     [SerializeField] private TextMeshProUGUI hiraganaTimer;
@@ -25,6 +28,7 @@ public class StageOneController : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.Instance.SoundManager.SetBGMusic(backgroundMusicClip);
         temphealth = userData.CurrentHealth;
         CheckHealth();
         currentTime = startTime;

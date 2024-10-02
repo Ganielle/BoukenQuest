@@ -20,6 +20,8 @@ MonoBehaviour:
     dialogue: {fileID: 11400000, guid: 1684912b18d104d4faa2297ac5f19948, type: 2}
   - characterName: Yuki
     dialogue: {fileID: 11400000, guid: f5becf2cf21f44e45a3e68fd048db6b2, type: 2}
+  - characterName: Gate
+    dialogue: {fileID: 11400000, guid: 2819085b28b68084ba3aab02e895f0c5, type: 2}
   <Positions>k__BackingField:
   - characterName: Ms.Hamada
     position: {x: 2.46, y: 3.56, z: 35.65}

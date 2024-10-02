@@ -13,8 +13,13 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private Button interactionButton;
 
     [Space]
+    [SerializeField] private bool isEnding;
+    [SerializeField] private bool endingPanel;
+
+    [Space]
     [SerializeField] private bool isLesson;
     [SerializeField] private GameObject lessonObj;
+
 
     [Space]
     [SerializeField] private NPCQuestController npcQuestController;

@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b437420aab5ca4e94d84da2829e665, type: 3}
   m_Name: Q 8
   m_EditorClassIdentifier: 
-  <QuestID>k__BackingField: 006
+  <QuestID>k__BackingField: 008
   <Item>k__BackingField:
     itemID: 
   <Dialouges>k__BackingField:
   - characterName: Ms.Hamada
-    dialogue: {fileID: 11400000, guid: 6039caccfcdbcfb44925daa72dc34aa2, type: 2}
+    dialogue: {fileID: 11400000, guid: 03ea0f0c653eb5947854466b36c1be4d, type: 2}
   - characterName: Yuki
     dialogue: {fileID: 11400000, guid: f5becf2cf21f44e45a3e68fd048db6b2, type: 2}
+  - characterName: Gate
+    dialogue: {fileID: 11400000, guid: 2819085b28b68084ba3aab02e895f0c5, type: 2}
   <Positions>k__BackingField:
   - characterName: Ms.Hamada
     position: {x: 2.46, y: 3.56, z: 35.65}

@@ -42,11 +42,15 @@ public class QuestController : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private List<QuestData> questDatas;
 
+    [Space]
+    [SerializeField] private AudioClip backgroundMusicClip;
+
     [Header("DEBUGGER")]
     [SerializeField] private int questIndex;
 
     private void OnEnable()
     {
+        GameManager.Instance.SoundManager.SetBGMusic(backgroundMusicClip);
         OnQuestIndexChange += QuestChange;
         QuestIndex = schoolSceneData.QuestIndex;
         questTMP.text = questDatas[questIndex].QuestName;

@@ -24229,6 +24229,7 @@ MonoBehaviour:
   playerDeath: {fileID: 1850743879}
   healthSlider: {fileID: 285283647}
   gameOverCG: {fileID: 1594451380}
+  backgroundMusicClip: {fileID: 8300000, guid: e7b4b3e455d1f234eb89ca9b5ccc6392, type: 3}
   startTime: 200
   hiraganaTimer: {fileID: 11869306}
   timer: {fileID: 726821275}

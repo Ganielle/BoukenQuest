@@ -6,6 +6,8 @@ using UnityEngine;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private SchoolSceneData schoolSceneData;
+    [SerializeField] private UserData userData;
+    [SerializeField] private AudioClip backgroundClip;
 
     [Header("ENTER YOUR NAME")]
     [SerializeField] private TMP_InputField usernameTMP;
@@ -13,6 +15,7 @@ public class MainMenuController : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.Instance.SoundManager.SetBGMusic(backgroundClip);
         GameManager.Instance.SceneController.ActionPass = true;
     }
 
@@ -30,6 +33,7 @@ public class MainMenuController : MonoBehaviour
 
     public void StartGame()
     {
+        userData.CurrentUsername = usernameTMP.text;
         schoolSceneData.ResetQuestData();
         GameManager.Instance.SceneController.CurrentScene = "School";
     }

@@ -27963,6 +27963,7 @@ MonoBehaviour:
   - {fileID: 81743825}
   - {fileID: 61676293}
   - {fileID: 261848269}
+  backgroundMusicClip: {fileID: 8300000, guid: e7b4b3e455d1f234eb89ca9b5ccc6392, type: 3}
   gameplayObj: {fileID: 1926465191}
   rightObj: {fileID: 989531478}
   wrongObj: {fileID: 1537805667}

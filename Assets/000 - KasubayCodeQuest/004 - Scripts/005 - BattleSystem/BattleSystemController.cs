@@ -34,6 +34,9 @@ public class BattleSystemController : MonoBehaviour
     [SerializeField] private SchoolSceneData schoolSceneData;
 
     [Space]
+    [SerializeField] private AudioClip backgroundMusicClip;
+
+    [Space]
     [SerializeField] private List<QuestionData> questionList;
     [SerializeField] private List<GameObject> enemyList;
     [SerializeField] private List<Animator> enemyAnimators;
@@ -75,6 +78,7 @@ public class BattleSystemController : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.Instance.SoundManager.SetBGMusic(backgroundMusicClip);
         tempCurrentHealh = userData.CurrentHealth;
         playerCurrentHealth = userData.CurrentHealth;
         OnBattleAnswerChange += PlayerAnswerChange;

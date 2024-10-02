@@ -35,6 +35,9 @@ public class Stage4SceneController : MonoBehaviour
     [SerializeField] private List<Stage4QuestionController> questionControllers;
 
     [Space]
+    [SerializeField] private AudioClip backgroundMusicClip;
+
+    [Space]
     [SerializeField] private GameObject gameplayObj;
     [SerializeField] private GameObject rightObj;
     [SerializeField] private GameObject wrongObj;
@@ -50,6 +53,7 @@ public class Stage4SceneController : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.Instance.SoundManager.SetBGMusic(backgroundMusicClip);
         tempHealth = userData.CurrentHealth;
         healthPlayerSlider.value = userData.CurrentHealth / 100;
 

@@ -20,5 +20,7 @@ MonoBehaviour:
     dialogue: {fileID: 11400000, guid: c44d222d64870d243bad2c6523a95e5c, type: 2}
   - characterName: Yuki
     dialogue: {fileID: 11400000, guid: 43ab46142fcdec34da94ede97e6d4913, type: 2}
+  - characterName: Gate
+    dialogue: {fileID: 11400000, guid: 2819085b28b68084ba3aab02e895f0c5, type: 2}
   <Positions>k__BackingField: []
   <QuestName>k__BackingField: Talk to Ms. Hamada (located at 1st floor main building)

@@ -69,11 +69,13 @@
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\PerformanceTests.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralBasics2d.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\004 - Quest\NPCQuestController.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\SoundManager.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\PlayerMovement.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\PlayerStageOneHiragana.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingSceneSwitching.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\001 - Stage2\SentencesStatues.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\TestingZLegacy.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\NotificationController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\003 - Stage4\Stage4AnswerItem.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralEventsListeners.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\001 - Platform\MovingPlatform.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\TestingUnitTests.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Framework\LTDescr.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - MainMenu\LoadGameItem.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\003 - Stage4\Stage4PlayerEnvironmentDetector.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\003 - Stage4\Stage4QuestionItem.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\Following.cs" />
@@ -638,6 +641,10 @@
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4\Mono.Cecil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\jillejr.newtonsoft.json-for-unity@13.0.102\Plugins\Newtonsoft.Json Editor\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">

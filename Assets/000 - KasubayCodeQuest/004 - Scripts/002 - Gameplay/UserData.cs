@@ -7,6 +7,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "UserData", menuName = "Mathscape/User/UserData", order = 1)]
 public class UserData : ScriptableObject
 {
+    public string CurrentUsername
+    {
+        get => username;
+        set => username = value;
+    }
+
     private event EventHandler HealthChange;
     public event EventHandler OnHealhChange
     {
@@ -39,6 +45,7 @@ public class UserData : ScriptableObject
     }
 
     [Header("DEBUGGER")]
+    [SerializeField] private string username;
     [SerializeField] private float currentHealth;
 
     [Space]
@@ -46,6 +53,7 @@ public class UserData : ScriptableObject
 
     private void OnEnable()
     {
+        CurrentUsername = "";
         CurrentHealth = 100f;
         CheckCameraSensitivity();
     }
@@ -56,5 +64,11 @@ public class UserData : ScriptableObject
             currentCameraSensitivity = PlayerPrefs.GetFloat("CameraSensitivity");
         else
             CameraSensitivity = 0.2f;
+    }
+
+    public void LoadGameData(float health, string name)
+    {
+        CurrentUsername = name;
+        CurrentHealth = health;
     }
 }

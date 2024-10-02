@@ -20,5 +20,7 @@ MonoBehaviour:
     dialogue: {fileID: 11400000, guid: 6dc22ab3d76c51844b5ad23156665c21, type: 2}
   - characterName: Yuki
     dialogue: {fileID: 11400000, guid: 963fba28da8e7e348b17ab2bf64d1f22, type: 2}
+  - characterName: Gate
+    dialogue: {fileID: 11400000, guid: 2819085b28b68084ba3aab02e895f0c5, type: 2}
   <Positions>k__BackingField: []
   <QuestName>k__BackingField: Talk to Yuki about your situation

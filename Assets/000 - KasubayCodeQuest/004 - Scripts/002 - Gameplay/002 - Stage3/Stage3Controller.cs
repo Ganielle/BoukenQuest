@@ -35,6 +35,9 @@ public class Stage3Controller : MonoBehaviour
     [SerializeField] private Slider healthSlider;
 
     [Space]
+    [SerializeField] private AudioClip backgroundMusicClip;
+
+    [Space]
     [SerializeField] private List<GameObject> cameras;
 
     [Space]
@@ -62,6 +65,7 @@ public class Stage3Controller : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.Instance.SoundManager.SetBGMusic(backgroundMusicClip);
         tempPlayerHealth = userData.CurrentHealth;
         healthSlider.value = userData.CurrentHealth / 100f;
 

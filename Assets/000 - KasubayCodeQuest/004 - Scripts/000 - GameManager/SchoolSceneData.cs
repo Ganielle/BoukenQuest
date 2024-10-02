@@ -20,4 +20,11 @@ public class SchoolSceneData : ScriptableObject
         PlayerOldPosition = new Vector3(-31.99f, -0.487f, -23.47f);
         PlayerOldRotation = new Vector3(0f, 0f, 0f);
     }
+
+    public void LoadData(int questIndex, Vector3 position, Vector3 rotation)
+    {
+        QuestIndex = questIndex;
+        PlayerOldPosition = position;
+        PlayerOldRotation = rotation;
+    }
 }
