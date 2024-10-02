@@ -5,11 +5,13 @@ using UnityEngine;
 public class PlayerWin : MonoBehaviour
 {
     [SerializeField] private CanvasGroup winCG;
+    [SerializeField] private UserData userData;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Teleporter"))
         {
+            userData.CurrentMoney += 50;
             Time.timeScale = 0f;
             winCG.alpha = 0f;
             winCG.gameObject.SetActive(true);

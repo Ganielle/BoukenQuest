@@ -31,6 +31,7 @@ public class StageOneQuest : MonoBehaviour
 
     //  =============================
 
+    [SerializeField] private UserData userData;
     [SerializeField] private StageOneController controller;
 
     [Space]
@@ -133,7 +134,21 @@ public class StageOneQuest : MonoBehaviour
         for (int a = 0; a < hiraganaQuestItems.Count; a++)
         {
             if (hiraganaQuestItems[a].itemIndex.ToString() == hiraganaQuestItems[a].itemData.ItemIndex)
+            {
+                if (userData.PlayerStatistics.ContainsKey("stageOneRightAnswers"))
+                    userData.PlayerStatistics.Add("stageOneRightAnswers", 1);
+                else
+                    userData.PlayerStatistics["stageOneRightAnswers"] += 1;
+                
                 correctAnswers++;
+            }
+            else
+            {
+                if (userData.PlayerStatistics.ContainsKey("stageOneWrongAnswers"))
+                    userData.PlayerStatistics.Add("stageOneWrongAnswers", 1);
+                else
+                    userData.PlayerStatistics["stageOneWrongAnswers"] += 1;
+            }
         }
 
         if (correctAnswers < 10)

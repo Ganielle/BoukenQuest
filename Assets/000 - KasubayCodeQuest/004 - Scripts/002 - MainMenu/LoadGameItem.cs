@@ -57,8 +57,11 @@ public class LoadGameItem : MonoBehaviour
         {
             Dictionary<string, object> loaddata = JsonConvert.DeserializeObject<Dictionary<string, object>>(PlayerPrefs.GetString(saveid));
 
+            Dictionary<ItemData, int> inventoryitems = JsonConvert.DeserializeObject<Dictionary<ItemData, int>>(loaddata["inventory"].ToString());
+            Dictionary<string, int> playerstatistics = JsonConvert.DeserializeObject<Dictionary<string, int>>(loaddata["playerstats"].ToString());
+
             schoolSceneData.LoadData(Convert.ToInt32(loaddata["index"].ToString()), new Vector3(float.Parse(loaddata["positionx"].ToString()), float.Parse(loaddata["positiony"].ToString()), float.Parse(loaddata["positionz"].ToString())), new Vector3(float.Parse(loaddata["rotationx"].ToString()), float.Parse(loaddata["rotationy"].ToString()), float.Parse(loaddata["rotationz"].ToString())));
-            userData.LoadGameData(float.Parse(loaddata["health"].ToString()), userData.CurrentUsername);
+            userData.LoadGameData(float.Parse(loaddata["health"].ToString()), userData.CurrentUsername, float.Parse(loaddata["money"].ToString()), inventoryitems, playerstatistics);
 
             GameManager.Instance.SceneController.CurrentScene = "School";
         }, null);
@@ -81,7 +84,10 @@ public class LoadGameItem : MonoBehaviour
                     { "rotationx", player.rotation.x },
                     { "rotationy", player.rotation.y },
                     { "rotationz", player.rotation.z },
-                    { "health", userData.CurrentHealth }
+                    { "health", userData.CurrentHealth },
+                    { "inventory", JsonConvert.SerializeObject(userData.InventoryItems) },
+                    { "money", userData.CurrentMoney},
+                    { "playerstats", JsonConvert.SerializeObject(userData.PlayerStatistics) }
                 };
 
                 string finalsavedata = JsonConvert.SerializeObject(savedata);
@@ -106,7 +112,10 @@ public class LoadGameItem : MonoBehaviour
                     { "rotationx", player.rotation.x },
                     { "rotationy", player.rotation.y },
                     { "rotationz", player.rotation.z },
-                    { "health", userData.CurrentHealth }
+                    { "health", userData.CurrentHealth },
+                    { "inventory", JsonConvert.SerializeObject(userData.InventoryItems) },
+                    { "money", userData.CurrentMoney },
+                    { "playerstats", JsonConvert.SerializeObject(userData.PlayerStatistics) }
                 };
 
                 string finalsavedata = JsonConvert.SerializeObject(savedata);

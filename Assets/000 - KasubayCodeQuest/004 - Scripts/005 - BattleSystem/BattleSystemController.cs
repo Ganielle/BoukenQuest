@@ -183,11 +183,23 @@ public class BattleSystemController : MonoBehaviour
         PanelCleanUp();
 
         if (CurrentPlayerAnswer.Answer == questionList[currentBattleIndex].RightAnswer)
+        {
             rightObj.SetActive(true);
+
+            if (userData.PlayerStatistics.ContainsKey("stageFiveRightAnswers"))
+                userData.PlayerStatistics.Add("stageFiveRightAnswers", 1);
+            else
+                userData.PlayerStatistics["stageFiveRightAnswers"] += 1;
+        }
         else
         {
             wrongTipsTMP.text = questionList[currentBattleIndex].Tips;
             wrongObj.SetActive(true);
+
+            if (userData.PlayerStatistics.ContainsKey("stageFiveWrongAnswers"))
+                userData.PlayerStatistics.Add("stageFiveWrongAnswers", 1);
+            else
+                userData.PlayerStatistics["stageFiveWrongAnswers"] += 1;
         }
     }
 
@@ -227,6 +239,7 @@ public class BattleSystemController : MonoBehaviour
     {
         if (currentBattleIndex >= enemyList.Count)
         {
+            userData.CurrentMoney += 50;
             winObj.SetActive(true);
             return;
         }

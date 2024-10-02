@@ -151,9 +151,21 @@ public class SentencesController : MonoBehaviour
         {
             userData.CurrentHealth -= 20;
             wrong.SetActive(true);
+
+            if (userData.PlayerStatistics.ContainsKey("stageTwoWrongAnswers"))
+                userData.PlayerStatistics.Add("stageTwoWrongAnswers", 1);
+            else
+                userData.PlayerStatistics["stageTwoWrongAnswers"] += 1;
         }
         else
+        {
             right.SetActive(true);
+
+            if (userData.PlayerStatistics.ContainsKey("stageTwoRightAnswers"))
+                userData.PlayerStatistics.Add("stageTwoRightAnswers", 1);
+            else
+                userData.PlayerStatistics["stageTwoRightAnswers"] += 1;
+        }
 
         if (currentObjectives < 10)
         {
@@ -175,6 +187,7 @@ public class SentencesController : MonoBehaviour
 
         if (currentObjectives >= 10)
         {
+            userData.CurrentMoney += 50;
             startGame = false;
             Time.timeScale = 0f;
             winObject.alpha = 0f;

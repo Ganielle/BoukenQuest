@@ -14,7 +14,7 @@ public class DialogueController : MonoBehaviour
 
     [Space]
     [SerializeField] private bool isEnding;
-    [SerializeField] private bool endingPanel;
+    [SerializeField] private GameObject endingPanel;
 
     [Space]
     [SerializeField] private bool isLesson;
@@ -88,6 +88,13 @@ public class DialogueController : MonoBehaviour
         {
             gameplayUIObj.SetActive(false);
             lessonObj.SetActive(true);
+            return;
+        }
+
+        if (isEnding)
+        {
+            gameplayUIObj.SetActive(false);
+            endingPanel.SetActive(true);
             return;
         }
 

@@ -37,6 +37,7 @@ public class QuestController : MonoBehaviour
 
     //  =======================
 
+    [SerializeField] private UserData userData;
     [SerializeField] private SchoolSceneData schoolSceneData;
     [SerializeField] private TextMeshProUGUI questTMP;
     [SerializeField] private Transform player;
@@ -44,6 +45,10 @@ public class QuestController : MonoBehaviour
 
     [Space]
     [SerializeField] private AudioClip backgroundMusicClip;
+
+    [Space]
+    [SerializeField] private TextMeshProUGUI playerStatsTMP;
+    [SerializeField] private TextMeshProUGUI endPlayerStatsTMP;
 
     [Header("DEBUGGER")]
     [SerializeField] private int questIndex;
@@ -56,6 +61,48 @@ public class QuestController : MonoBehaviour
         questTMP.text = questDatas[questIndex].QuestName;
         player.transform.position = schoolSceneData.PlayerOldPosition;
         player.transform.rotation = Quaternion.Euler(schoolSceneData.PlayerOldRotation);
+
+        if (userData.PlayerStatistics.Count > 0)
+        {
+            playerStatsTMP.text = $"Stage 1:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageOneRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageOneWrongAnswers"]}\n\n" +
+                $"Stage 2:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageTwoRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageTwoWrongAnswers"]}\n\n" +
+                $"Stage 3:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageThreeRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageThreeWrongAnswers"]}\n\n" +
+                $"Stage 4:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageFourRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageFourWrongAnswers"]}\n\n" +
+                $"Stage 5:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageFiveRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageFiveWrongAnswers"]}\n\n";
+
+
+            endPlayerStatsTMP.text = $"Stage 1:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageOneRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageOneWrongAnswers"]}\n\n" +
+                $"Stage 2:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageTwoRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageTwoWrongAnswers"]}\n\n" +
+                $"Stage 3:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageThreeRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageThreeWrongAnswers"]}\n\n" +
+                $"Stage 4:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageFourRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageFourWrongAnswers"]}\n\n" +
+                $"Stage 5:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageFiveRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageFiveWrongAnswers"]}\n\n";
+        }
+        else
+        {
+            playerStatsTMP.text = "No data yet!\n Please complete the stages on the map first!";
+            endPlayerStatsTMP.text = "No data yet!\n Please complete the stages on the map first!";
+        }
+
         GameManager.Instance.SceneController.ActionPass = true;
     }
 

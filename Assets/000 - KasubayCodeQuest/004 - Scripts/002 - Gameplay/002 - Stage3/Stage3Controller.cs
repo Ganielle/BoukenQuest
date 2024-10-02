@@ -129,6 +129,10 @@ public class Stage3Controller : MonoBehaviour
         {
             //  ADD CODE HERE ?
             isRight = true;
+            if (userData.PlayerStatistics.ContainsKey("stageThreeRightAnswers"))
+                userData.PlayerStatistics.Add("stageThreeRightAnswers", 1);
+            else
+                userData.PlayerStatistics["stageThreeRightAnswers"] += 1;
         }
         else
         {
@@ -139,6 +143,11 @@ public class Stage3Controller : MonoBehaviour
                 userData.CurrentHealth = 0f;
 
             healthSlider.value = userData.CurrentHealth / 100f;
+
+            if (userData.PlayerStatistics.ContainsKey("stageThreeWrongAnswers"))
+                userData.PlayerStatistics.Add("stageThreeWrongAnswers", 1);
+            else
+                userData.PlayerStatistics["stageThreeWrongAnswers"] += 1;
         }
 
         questionIndex++;
@@ -163,7 +172,7 @@ public class Stage3Controller : MonoBehaviour
         if (questionIndex >= questionDatas.Count - 1)
         {
             //  WIN
-
+            userData.CurrentMoney += 50;
             youWinObj.SetActive(true);
 
             yield break;

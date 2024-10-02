@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You earned 200+ Coins
+  m_text: You earned 50+ Money
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -36690,6 +36690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676261bf4aa0ff840a57804cb989bc6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userData: {fileID: 11400000, guid: 2da16ff9c265619478b9956d1ec2058d, type: 2}
   playerController: {fileID: 985832800}
   interactBtn: {fileID: 499410760}
   answerPanelObj: {fileID: 2126388826}

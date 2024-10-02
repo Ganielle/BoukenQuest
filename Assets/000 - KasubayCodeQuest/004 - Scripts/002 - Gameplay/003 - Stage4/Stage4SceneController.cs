@@ -81,6 +81,11 @@ public class Stage4SceneController : MonoBehaviour
         if (answer == questionDatas[questionIndex].RightAnswer)
         {
             isRight = true;
+
+            if (userData.PlayerStatistics.ContainsKey("stageFourRightAnswers"))
+                userData.PlayerStatistics.Add("stageFourRightAnswers", 1);
+            else
+                userData.PlayerStatistics["stageFourRightAnswers"] += 1;
         }
         else
         {
@@ -91,6 +96,11 @@ public class Stage4SceneController : MonoBehaviour
                 userData.CurrentHealth = 0f;
 
             healthPlayerSlider.value = userData.CurrentHealth / 100f;
+
+            if (userData.PlayerStatistics.ContainsKey("stageFourWrongAnswers"))
+                userData.PlayerStatistics.Add("stageFourWrongAnswers", 1);
+            else
+                userData.PlayerStatistics["stageFourWrongAnswers"] += 1;
         }
 
         if (QuestionIndex < questionDatas.Count)

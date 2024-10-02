@@ -14,6 +14,7 @@ TagManager:
   - FinalQuest
   - QuestionQuest
   - Stage4Question
+  - Merchant
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - BoxCollider
   - Box
   - CollapseFloor
-  - 
+  - Merchant
   - 
   - 
   - 

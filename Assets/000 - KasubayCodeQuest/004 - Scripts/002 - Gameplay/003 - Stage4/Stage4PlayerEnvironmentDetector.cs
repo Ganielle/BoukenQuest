@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Stage4PlayerEnvironmentDetector : MonoBehaviour
 {
+    [SerializeField] private UserData userData;
     [SerializeField] private GamePlayerController playerController;
     [SerializeField] private Button interactBtn;
 
@@ -54,6 +55,7 @@ public class Stage4PlayerEnvironmentDetector : MonoBehaviour
         }
         else if (other.CompareTag("Teleporter"))
         {
+            userData.CurrentMoney += 50;
             Time.timeScale = 0f;
             winObj.SetActive(true);
             gameplayObj.SetActive(false);
