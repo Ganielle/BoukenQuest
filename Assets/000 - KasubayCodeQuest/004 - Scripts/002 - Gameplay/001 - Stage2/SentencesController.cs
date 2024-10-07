@@ -9,6 +9,7 @@ public class SentencesController : MonoBehaviour
 {
     [SerializeField] private UserData userData;
     [SerializeField] private SchoolSceneData schoolSceneData;
+    [SerializeField] private StageTwoStatueDetector statueDetector;
 
     [Space]
     [SerializeField] private Slider healthSlider;
@@ -153,18 +154,18 @@ public class SentencesController : MonoBehaviour
             wrong.SetActive(true);
 
             if (userData.PlayerStatistics.ContainsKey("stageTwoWrongAnswers"))
-                userData.PlayerStatistics.Add("stageTwoWrongAnswers", 1);
-            else
                 userData.PlayerStatistics["stageTwoWrongAnswers"] += 1;
+            else
+                userData.PlayerStatistics.Add("stageTwoWrongAnswers", 1);
         }
         else
         {
             right.SetActive(true);
 
             if (userData.PlayerStatistics.ContainsKey("stageTwoRightAnswers"))
-                userData.PlayerStatistics.Add("stageTwoRightAnswers", 1);
-            else
                 userData.PlayerStatistics["stageTwoRightAnswers"] += 1;
+            else
+                userData.PlayerStatistics.Add("stageTwoRightAnswers", 1);
         }
 
         if (currentObjectives < 10)
@@ -174,6 +175,7 @@ public class SentencesController : MonoBehaviour
         }
 
         currentData = null;
+        statueDetector.StatueReset();
 
         StartCoroutine(RightWrongIcon());
     }

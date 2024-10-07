@@ -34,6 +34,7 @@ public class MainMenuController : MonoBehaviour
     public void StartGame()
     {
         userData.CurrentUsername = usernameTMP.text;
+        userData.SetPlayerStatistics();
         schoolSceneData.ResetQuestData();
         GameManager.Instance.SceneController.CurrentScene = "School";
     }

@@ -37,4 +37,6 @@ public class StageTwoStatueDetector : MonoBehaviour
             controller.InteractTurnOff();
         }
     }
+
+    public void StatueReset() => statue = null;
 }

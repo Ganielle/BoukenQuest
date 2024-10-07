@@ -88,6 +88,22 @@ public class UserData : ScriptableObject
         CheckCameraSensitivity();
     }
 
+    public void SetPlayerStatistics()
+    {
+        PlayerStatistics.Clear();
+
+        PlayerStatistics.Add("stageOneRightAnswers", 0);
+        PlayerStatistics.Add("stageOneWrongAnswers", 0);
+        PlayerStatistics.Add("stageTwoRightAnswers", 0);
+        PlayerStatistics.Add("stageTwoWrongAnswers", 0);
+        PlayerStatistics.Add("stageThreeRightAnswers", 0);
+        PlayerStatistics.Add("stageThreeWrongAnswers", 0);
+        PlayerStatistics.Add("stageFourRightAnswers", 0);
+        PlayerStatistics.Add("stageFourWrongAnswers", 0);
+        PlayerStatistics.Add("stageFiveRightAnswers", 0);
+        PlayerStatistics.Add("stageFiveWrongAnswers", 0);
+    }
+
     private void CheckCameraSensitivity()
     {
         if (PlayerPrefs.HasKey("CameraSensitivity"))
@@ -98,6 +114,7 @@ public class UserData : ScriptableObject
 
     public void LoadGameData(float health, string name, float money, Dictionary<ItemData, int> inventory, Dictionary<string, int> playerStatistics)
     {
+        PlayerStatistics.Clear();
         CurrentUsername = name;
         CurrentHealth = health;
         CurrentMoney = money;

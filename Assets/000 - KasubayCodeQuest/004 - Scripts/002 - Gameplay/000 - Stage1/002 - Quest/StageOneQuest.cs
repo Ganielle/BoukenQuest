@@ -136,18 +136,18 @@ public class StageOneQuest : MonoBehaviour
             if (hiraganaQuestItems[a].itemIndex.ToString() == hiraganaQuestItems[a].itemData.ItemIndex)
             {
                 if (userData.PlayerStatistics.ContainsKey("stageOneRightAnswers"))
-                    userData.PlayerStatistics.Add("stageOneRightAnswers", 1);
-                else
                     userData.PlayerStatistics["stageOneRightAnswers"] += 1;
+                else
+                    userData.PlayerStatistics.Add("stageOneRightAnswers", 1);
                 
                 correctAnswers++;
             }
             else
             {
                 if (userData.PlayerStatistics.ContainsKey("stageOneWrongAnswers"))
-                    userData.PlayerStatistics.Add("stageOneWrongAnswers", 1);
-                else
                     userData.PlayerStatistics["stageOneWrongAnswers"] += 1;
+                else
+                    userData.PlayerStatistics.Add("stageOneWrongAnswers", 1);
             }
         }
 

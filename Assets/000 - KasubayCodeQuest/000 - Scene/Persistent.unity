@@ -2765,7 +2765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d79b1cd36f1da94ea8972b1c391b7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startScene: MainMenu
+  startScene: Stage2
   dontDestroyOnLoadList:
   - {fileID: 1706472740}
   - {fileID: 1802643097}

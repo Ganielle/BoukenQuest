@@ -187,9 +187,9 @@ public class BattleSystemController : MonoBehaviour
             rightObj.SetActive(true);
 
             if (userData.PlayerStatistics.ContainsKey("stageFiveRightAnswers"))
-                userData.PlayerStatistics.Add("stageFiveRightAnswers", 1);
-            else
                 userData.PlayerStatistics["stageFiveRightAnswers"] += 1;
+            else
+                userData.PlayerStatistics.Add("stageFiveRightAnswers", 1);
         }
         else
         {
@@ -197,9 +197,9 @@ public class BattleSystemController : MonoBehaviour
             wrongObj.SetActive(true);
 
             if (userData.PlayerStatistics.ContainsKey("stageFiveWrongAnswers"))
-                userData.PlayerStatistics.Add("stageFiveWrongAnswers", 1);
-            else
                 userData.PlayerStatistics["stageFiveWrongAnswers"] += 1;
+            else
+                userData.PlayerStatistics.Add("stageFiveWrongAnswers", 1);
         }
     }
 
