@@ -36427,7 +36427,7 @@ MonoBehaviour:
   userData: {fileID: 11400000, guid: 2da16ff9c265619478b9956d1ec2058d, type: 2}
   playerControls: {fileID: 985832800}
   target: {fileID: 727304883}
-  maxCameraSensitivity: 5
+  maxCameraSensitivity: 50
   topClamp: 70
   bottomClamp: -30
   cameraAngleOverride: 0

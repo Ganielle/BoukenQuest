@@ -31,6 +31,10 @@ public class SentencesController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI questionTimer;
     [SerializeField] private float startTime;
 
+    [Space]
+    [SerializeField] private Color pressBtnColor;
+    [SerializeField] private Color unpressBtnColor;
+
     [Header("DEBUGGER")]
     [SerializeField] private SentencesData currentData;
     [SerializeField] private int currentObjectives;
@@ -227,4 +231,7 @@ public class SentencesController : MonoBehaviour
         schoolSceneData.QuestIndex++;
         GameManager.Instance.SceneController.CurrentScene = "School";
     }
+
+    public void PressBtn(Image btnImg) => btnImg.color = pressBtnColor;
+    public void UnpressBtn(Image btnImg) => btnImg.color = unpressBtnColor;
 }

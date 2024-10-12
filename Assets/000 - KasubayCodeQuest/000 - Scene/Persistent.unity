@@ -1649,7 +1649,7 @@ Transform:
   m_GameObject: {fileID: 1284910327}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.38, y: 1.023, z: -25.789999}
+  m_LocalPosition: {x: 604.08997, y: 3.5230002, z: 540.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2765,7 +2765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d79b1cd36f1da94ea8972b1c391b7cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startScene: Stage2
+  startScene: MainMenu
   dontDestroyOnLoadList:
   - {fileID: 1706472740}
   - {fileID: 1802643097}
