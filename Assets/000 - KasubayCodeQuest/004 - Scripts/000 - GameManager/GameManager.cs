@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     [field: SerializeField] public Camera MainCamera { get; private set; }
     [field: SerializeField] public Camera UICamera { get; private set; }
 
+    [field: Header("ITEM LIST")]
+    [field: SerializeField] public List<ItemData> ItemList { get; private set; }
+
     [field: Header("SCRIPT REFERENCES")]
     [field: SerializeField] public SceneController SceneController { get; private set; }
     [field: SerializeField] public NotificationController NotificationController { get; private set; }

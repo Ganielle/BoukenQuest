@@ -91,7 +91,7 @@ public class DialogueController : MonoBehaviour
             return;
         }
 
-        if (isEnding)
+        if (npcQuestController.CheckIfThisIsQuest() && isEnding)
         {
             gameplayUIObj.SetActive(false);
             endingPanel.SetActive(true);

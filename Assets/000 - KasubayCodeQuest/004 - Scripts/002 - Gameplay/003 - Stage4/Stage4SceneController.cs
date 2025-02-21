@@ -35,6 +35,9 @@ public class Stage4SceneController : MonoBehaviour
     [SerializeField] private List<Stage4QuestionController> questionControllers;
 
     [Space]
+    [SerializeField] private int currentQuest;
+
+    [Space]
     [SerializeField] private AudioClip backgroundMusicClip;
 
     [Space]
@@ -150,7 +153,17 @@ public class Stage4SceneController : MonoBehaviour
 
     public void ReturnSchoolWin()
     {
-        schoolSceneData.QuestIndex++;
+        if (schoolSceneData.QuestIndex == currentQuest)
+            schoolSceneData.QuestIndex++;
+
         GameManager.Instance.SceneController.CurrentScene = "School";
+    }
+
+    public void ResumeWorldTime(bool value)
+    {
+        if (value)
+            Time.timeScale = 1f;
+        else
+            Time.timeScale = 0f;
     }
 }

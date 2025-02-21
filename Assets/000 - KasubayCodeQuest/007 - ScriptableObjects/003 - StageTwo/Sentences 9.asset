@@ -15,16 +15,16 @@ MonoBehaviour:
   <SentencesList>k__BackingField:
   - characters: "\u306F\u306A\u3001"
     translation: hana
-    index: 1
+    index: 3
   - characters: "\u3046\u3064\u304F\u3057\u3044\u3001"
     translation: utsukishii
     index: 2
   - characters: "\u3055\u3044\u3066\u3044\u307E\u3059\u3001"
     translation: saiteimasu
-    index: 3
+    index: 5
   - characters: "\u306B\u308F\u3067\u3001"
     translation: niwa de
-    index: 4
+    index: 1
   - characters: "\u308F\u305F\u3057\u306F\u3001"
     translation: ga
-    index: 5
+    index: 4

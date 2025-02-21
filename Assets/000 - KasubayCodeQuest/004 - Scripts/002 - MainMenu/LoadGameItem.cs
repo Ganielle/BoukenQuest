@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -55,16 +56,44 @@ public class LoadGameItem : MonoBehaviour
     {
         GameManager.Instance.NotificationController.ShowConfirmation($"Are you sure you want to load this save data ({username}, {datetime})", () =>
         {
-            Dictionary<string, object> loaddata = JsonConvert.DeserializeObject<Dictionary<string, object>>(PlayerPrefs.GetString(saveid));
-
-            Dictionary<ItemData, int> inventoryitems = JsonConvert.DeserializeObject<Dictionary<ItemData, int>>(loaddata["inventory"].ToString());
-            Dictionary<string, int> playerstatistics = JsonConvert.DeserializeObject<Dictionary<string, int>>(loaddata["playerstats"].ToString());
-
-            schoolSceneData.LoadData(Convert.ToInt32(loaddata["index"].ToString()), new Vector3(float.Parse(loaddata["positionx"].ToString()), float.Parse(loaddata["positiony"].ToString()), float.Parse(loaddata["positionz"].ToString())), new Vector3(float.Parse(loaddata["rotationx"].ToString()), float.Parse(loaddata["rotationy"].ToString()), float.Parse(loaddata["rotationz"].ToString())));
-            userData.LoadGameData(float.Parse(loaddata["health"].ToString()), userData.CurrentUsername, float.Parse(loaddata["money"].ToString()), inventoryitems, playerstatistics);
-
-            GameManager.Instance.SceneController.CurrentScene = "School";
+            StartCoroutine(Load());
         }, null);
+    }
+
+    IEnumerator Load()
+    {
+        Dictionary<string, object> loaddata = JsonConvert.DeserializeObject<Dictionary<string, object>>(PlayerPrefs.GetString(saveid));
+
+        Dictionary<string, int> tempInventory = JsonConvert.DeserializeObject<Dictionary<string, int>>(loaddata["inventory"].ToString());
+
+        Dictionary<ItemData, int> playertempinventory = new Dictionary<ItemData, int>();
+
+        Dictionary<string, int> playerstatistics = JsonConvert.DeserializeObject<Dictionary<string, int>>(loaddata["playerstats"].ToString());
+
+        foreach (var key in tempInventory)
+        {
+            Debug.Log(key.Key);
+            foreach (ItemData item in GameManager.Instance.ItemList)
+            {
+                Debug.Log(key.Key == item.ItemID);
+                if (key.Key == item.ItemID)
+                {
+                    if (playertempinventory.ContainsKey(item))
+                        playertempinventory[item] += key.Value;
+                    else
+                        playertempinventory.Add(item, key.Value);
+                }
+
+                yield return null;
+            }
+
+            yield return null;
+        }
+
+        schoolSceneData.LoadData(Convert.ToInt32(loaddata["index"].ToString()), new Vector3(float.Parse(loaddata["positionx"].ToString()), float.Parse(loaddata["positiony"].ToString()), float.Parse(loaddata["positionz"].ToString())), new Vector3(float.Parse(loaddata["rotationx"].ToString()), float.Parse(loaddata["rotationy"].ToString()), float.Parse(loaddata["rotationz"].ToString())));
+        userData.LoadGameData(float.Parse(loaddata["health"].ToString()), loaddata["username"].ToString(), float.Parse(loaddata["money"].ToString()), playertempinventory, playerstatistics);
+
+        GameManager.Instance.SceneController.CurrentScene = "School";
     }
 
     public void SaveGame()
@@ -73,6 +102,8 @@ public class LoadGameItem : MonoBehaviour
         {
             GameManager.Instance.NotificationController.ShowConfirmation($"There's an existing data! Are you sure you want to rewrite this data?", () =>
             {
+                Dictionary<string, int> tempInventory = userData.InventoryItems.ToDictionary(item => item.Key.ItemID, item => item.Value);
+
                 Dictionary<string, object> savedata = new()
                 {
                     { "username", userData.CurrentUsername },
@@ -85,7 +116,7 @@ public class LoadGameItem : MonoBehaviour
                     { "rotationy", player.rotation.y },
                     { "rotationz", player.rotation.z },
                     { "health", userData.CurrentHealth },
-                    { "inventory", JsonConvert.SerializeObject(userData.InventoryItems) },
+                    { "inventory", JsonConvert.SerializeObject(tempInventory) },
                     { "money", userData.CurrentMoney},
                     { "playerstats", JsonConvert.SerializeObject(userData.PlayerStatistics) }
                 };
@@ -101,6 +132,8 @@ public class LoadGameItem : MonoBehaviour
         {
             GameManager.Instance.NotificationController.ShowConfirmation($"Are you sure you want to save your progress?", () =>
             {
+                Dictionary<string, int> tempInventory = userData.InventoryItems.ToDictionary(item => item.Key.ItemID, item => item.Value);
+
                 Dictionary<string, object> savedata = new()
                 {
                     { "username", userData.CurrentUsername },
@@ -113,7 +146,7 @@ public class LoadGameItem : MonoBehaviour
                     { "rotationy", player.rotation.y },
                     { "rotationz", player.rotation.z },
                     { "health", userData.CurrentHealth },
-                    { "inventory", JsonConvert.SerializeObject(userData.InventoryItems) },
+                    { "inventory", JsonConvert.SerializeObject(tempInventory) },
                     { "money", userData.CurrentMoney },
                     { "playerstats", JsonConvert.SerializeObject(userData.PlayerStatistics) }
                 };

@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <SentencesList>k__BackingField:
   - characters: "\u304C\u304F\u305B\u3044\u3001"
-    translation: Gakusei
-    index: 1
+    translation: gakusei
+    index: 2
   - characters: "\u308F\u305F\u3057\u306F\u3001"
     translation: watashi wa
-    index: 2
+    index: 1
   - characters: "\u3067\u3001"
     translation: de
     index: 3
   - characters: "\u3067\u3059\u3001"
     translation: desu
-    index: 4
+    index: 5
   - characters: "\u304B\u308C\u3082\u3002"
     translation: kare mo
-    index: 5
+    index: 4

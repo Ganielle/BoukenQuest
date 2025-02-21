@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestController : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class QuestController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI questTMP;
     [SerializeField] private Transform player;
     [SerializeField] private List<QuestData> questDatas;
+    [SerializeField] private Slider healthSlider;
 
     [Space]
     [SerializeField] private AudioClip backgroundMusicClip;
@@ -61,6 +63,10 @@ public class QuestController : MonoBehaviour
         questTMP.text = questDatas[questIndex].QuestName;
         player.transform.position = schoolSceneData.PlayerOldPosition;
         player.transform.rotation = Quaternion.Euler(schoolSceneData.PlayerOldRotation);
+
+        healthSlider.value = userData.CurrentHealth / 100;
+
+        userData.OnHealhChange += HealthChange;
 
         if (userData.PlayerStatistics.Count > 0)
         {
@@ -109,6 +115,12 @@ public class QuestController : MonoBehaviour
     private void OnDisable()
     {
         OnQuestIndexChange -= QuestChange;
+        userData.OnHealhChange -= HealthChange;
+    }
+
+    private void HealthChange(object sender, EventArgs e)
+    {
+        healthSlider.value = userData.CurrentHealth / 100;
     }
 
     private void QuestChange(object sender, EventArgs e)

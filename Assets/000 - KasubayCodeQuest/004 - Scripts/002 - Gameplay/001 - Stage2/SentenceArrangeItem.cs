@@ -20,6 +20,8 @@ public class SentenceArrangeItem : MonoBehaviour
             return;
         }
 
+        gameObject.SetActive(true);
+
         this.answer.text = answer;
         this.translate.text = translate;
         currentIndex = 1;

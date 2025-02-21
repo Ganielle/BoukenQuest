@@ -15,16 +15,16 @@ MonoBehaviour:
   <SentencesList>k__BackingField:
   - characters: "\u304A\u3082\u3057\u308D\u3044\u3001"
     translation: Omoshiroi
-    index: 1
+    index: 3
   - characters: "\u3048\u3044\u304C\u3092\u3001"
     translation: eiga o
-    index: 2
+    index: 4
   - characters: "\u307F\u307E\u3057\u305F\u3001\u3001"
     translation: mimashita
-    index: 3
+    index: 5
   - characters: "\u304D\u306E\u3046\u3001"
     translation: kinou
-    index: 4
+    index: 1
   - characters: "\u308F\u305F\u3057\u306F\u3002"
     translation: watashi wa
-    index: 5
+    index: 2

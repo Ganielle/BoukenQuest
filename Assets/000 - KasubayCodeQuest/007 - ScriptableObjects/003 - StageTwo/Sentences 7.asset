@@ -15,19 +15,19 @@ MonoBehaviour:
   <SentencesList>k__BackingField:
   - characters: "\u304A\u304A\u304D\u304F\u3066\u3001"
     translation: ookikute
-    index: 1
+    index: 4
   - characters: "\u3044\u3048\u3001"
     translation: ie
     index: 2
   - characters: "\u308F\u305F\u3057\u306E\u3001"
     translation: watashi no
-    index: 3
+    index: 1
   - characters: "\u306F\u3001"
     translation: wa
-    index: 4
+    index: 3
   - characters: "\u3067\u3059\u3001"
     translation: desu
-    index: 5
+    index: 6
   - characters: "\u304D\u308C\u3044\u3002"
     translation: kirei
-    index: 6
+    index: 5

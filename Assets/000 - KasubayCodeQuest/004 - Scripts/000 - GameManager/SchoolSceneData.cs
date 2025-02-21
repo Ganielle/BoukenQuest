@@ -12,7 +12,7 @@ public class SchoolSceneData : ScriptableObject
     private void OnEnable()
     {
         ResetQuestData();
-    }
+    }   
 
     public void ResetQuestData()
     {

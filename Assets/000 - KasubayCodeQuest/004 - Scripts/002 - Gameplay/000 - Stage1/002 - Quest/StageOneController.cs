@@ -14,6 +14,9 @@ public class StageOneController : MonoBehaviour
     [SerializeField] private CanvasGroup gameOverCG;
 
     [Space]
+    [SerializeField] private int currentQuest;
+
+    [Space]
     [SerializeField] private AudioClip backgroundMusicClip;
 
     [Header("TIMER")]
@@ -112,7 +115,9 @@ public class StageOneController : MonoBehaviour
 
     public void ReturnToSchoolSuccess()
     {
-        schoolSceneData.QuestIndex++;
+        if (schoolSceneData.QuestIndex == currentQuest)
+            schoolSceneData.QuestIndex++;
+
         GameManager.Instance.SceneController.CurrentScene = "School";
     }
 }

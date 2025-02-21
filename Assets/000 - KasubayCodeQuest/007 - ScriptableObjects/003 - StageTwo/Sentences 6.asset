@@ -15,16 +15,16 @@ MonoBehaviour:
   <SentencesList>k__BackingField:
   - characters: "\u3042\u304B\u3044\u3001"
     translation: Akai
-    index: 1
+    index: 3
   - characters: "\u304F\u308B\u307E\u3001"
     translation: kuruma
-    index: 2
+    index: 4
   - characters: "\u3042\u308C\u306F\u3001"
     translation: are wa
-    index: 3
+    index: 1
   - characters: "\u3067\u3059\u3001"
     translation: desu
-    index: 4
+    index: 5
   - characters: "\u3075\u308B\u3044\u3002"
     translation: furui
-    index: 5
+    index: 2

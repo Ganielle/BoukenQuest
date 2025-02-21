@@ -35,6 +35,9 @@ public class Stage3Controller : MonoBehaviour
     [SerializeField] private Slider healthSlider;
 
     [Space]
+    [SerializeField] private int currentQuest;
+
+    [Space]
     [SerializeField] private AudioClip backgroundMusicClip;
 
     [Space]
@@ -212,7 +215,9 @@ public class Stage3Controller : MonoBehaviour
 
     public void ReturnSchoolWin()
     {
-        schoolSceneData.QuestIndex++;
+        if (schoolSceneData.QuestIndex == currentQuest)
+            schoolSceneData.QuestIndex++;
+
         GameManager.Instance.SceneController.CurrentScene = "School";
     }
 }

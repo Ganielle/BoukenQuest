@@ -34,6 +34,9 @@ public class BattleSystemController : MonoBehaviour
     [SerializeField] private SchoolSceneData schoolSceneData;
 
     [Space]
+    [SerializeField] private int currentQuest;
+
+    [Space]
     [SerializeField] private AudioClip backgroundMusicClip;
 
     [Space]
@@ -124,7 +127,9 @@ public class BattleSystemController : MonoBehaviour
 
     public void ReturnSchoolWin()
     {
-        schoolSceneData.QuestIndex++;
+        if (schoolSceneData.QuestIndex == currentQuest)
+            schoolSceneData.QuestIndex++;
+
         GameManager.Instance.SceneController.CurrentScene = "School";
     }
 

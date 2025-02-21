@@ -12,6 +12,9 @@ public class SentencesController : MonoBehaviour
     [SerializeField] private StageTwoStatueDetector statueDetector;
 
     [Space]
+    [SerializeField] private int currentQuest;
+
+    [Space]
     [SerializeField] private Slider healthSlider;
     [SerializeField] private CanvasGroup gameOverCG;
     [SerializeField] private CanvasGroup winObject;
@@ -122,9 +125,13 @@ public class SentencesController : MonoBehaviour
 
         yield return StartCoroutine(tempDatas.Shuffle());
 
+        Debug.Log(tempDatas.Count);
+
         for (int a = 0; a < answerItems.Count; a++)
         {
-            if (a < data.SentencesList.Count)
+            Debug.Log($"{a} / {tempDatas.Count} ({(a < tempDatas.Count ? tempDatas[a].translation : "")})");
+            Debug.Log(a < tempDatas.Count);
+            if (a < tempDatas.Count)
                 answerItems[a].SetData(tempDatas[a].characters, tempDatas[a].translation);
             else
                 answerItems[a].SetData("", "");
@@ -228,7 +235,9 @@ public class SentencesController : MonoBehaviour
 
     public void ReturnToSchoolSuccess()
     {
-        schoolSceneData.QuestIndex++;
+        if (schoolSceneData.QuestIndex == currentQuest)
+            schoolSceneData.QuestIndex++;
+
         GameManager.Instance.SceneController.CurrentScene = "School";
     }
 
