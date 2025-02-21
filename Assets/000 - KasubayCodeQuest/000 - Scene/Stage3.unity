@@ -53600,6 +53600,7 @@ MonoBehaviour:
   userData: {fileID: 11400000, guid: 2da16ff9c265619478b9956d1ec2058d, type: 2}
   schoolSceneData: {fileID: 11400000, guid: 9a110cc76f1a03a4790febad276828c5, type: 2}
   healthSlider: {fileID: 1927867882}
+  currentQuest: 9
   backgroundMusicClip: {fileID: 8300000, guid: e7b4b3e455d1f234eb89ca9b5ccc6392, type: 3}
   cameras:
   - {fileID: 901844500}

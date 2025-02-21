@@ -36899,6 +36899,7 @@ MonoBehaviour:
   userData: {fileID: 11400000, guid: 2da16ff9c265619478b9956d1ec2058d, type: 2}
   schoolSceneData: {fileID: 11400000, guid: 9a110cc76f1a03a4790febad276828c5, type: 2}
   statueDetector: {fileID: 1602365849}
+  currentQuest: 7
   healthSlider: {fileID: 1980351991}
   gameOverCG: {fileID: 852242358}
   winObject: {fileID: 663939397}
