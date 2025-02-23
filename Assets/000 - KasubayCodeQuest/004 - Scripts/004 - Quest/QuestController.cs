@@ -84,7 +84,13 @@ public class QuestController : MonoBehaviour
                 $"Wrong Answers: {userData.PlayerStatistics["stageFourWrongAnswers"]}\n\n" +
                 $"Stage 5:\n\n" +
                 $"Right Answers: {userData.PlayerStatistics["stageFiveRightAnswers"]}\n" +
-                $"Wrong Answers: {userData.PlayerStatistics["stageFiveWrongAnswers"]}\n\n";
+                $"Wrong Answers: {userData.PlayerStatistics["stageFiveWrongAnswers"]}\n\n" +
+                $"Stage 6:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageSixRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageSixWrongAnswers"]}\n\n" +
+                $"Stage 7:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageSevenRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageSevenWrongAnswers"]}\n\n"; ;
 
 
             endPlayerStatsTMP.text = $"Stage 1:\n\n" +
@@ -101,7 +107,13 @@ public class QuestController : MonoBehaviour
                 $"Wrong Answers: {userData.PlayerStatistics["stageFourWrongAnswers"]}\n\n" +
                 $"Stage 5:\n\n" +
                 $"Right Answers: {userData.PlayerStatistics["stageFiveRightAnswers"]}\n" +
-                $"Wrong Answers: {userData.PlayerStatistics["stageFiveWrongAnswers"]}\n\n";
+                $"Wrong Answers: {userData.PlayerStatistics["stageFiveWrongAnswers"]}\n\n" +
+                $"Stage 6:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageSixRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageSixWrongAnswers"]}\n\n" +
+                $"Stage 7:\n\n" +
+                $"Right Answers: {userData.PlayerStatistics["stageSevenRightAnswers"]}\n" +
+                $"Wrong Answers: {userData.PlayerStatistics["stageSevenWrongAnswers"]}\n\n";
         }
         else
         {

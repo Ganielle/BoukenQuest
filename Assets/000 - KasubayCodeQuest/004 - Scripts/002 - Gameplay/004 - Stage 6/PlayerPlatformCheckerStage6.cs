@@ -16,7 +16,13 @@ public class PlayerPlatformCheckerStage6 : MonoBehaviour
             if (questionController == null) return;
 
             if (questionController.questionIndex == stage.QuestionIndex)
+            {
                 stage.QuestionIndex++;
+                if (userData.PlayerStatistics.ContainsKey("stageSixRightAnswers"))
+                    userData.PlayerStatistics["stageSixRightAnswers"] += 1;
+                else
+                    userData.PlayerStatistics.Add("stageSixRightAnswers", 1);
+            }
         }
 
         if (other.gameObject.CompareTag("Death"))

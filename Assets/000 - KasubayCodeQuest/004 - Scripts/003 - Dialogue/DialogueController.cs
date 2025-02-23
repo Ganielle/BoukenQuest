@@ -50,6 +50,8 @@ public class DialogueController : MonoBehaviour
     Coroutine showText;
     Action finalAction;
 
+    Coroutine dialogueCoroutine;
+
     //  =========================
 
     private void OnEnable()
@@ -106,6 +108,8 @@ public class DialogueController : MonoBehaviour
             {
                 if (showText != null)
                     StopCoroutine(showText);
+
+                if (dialogueCoroutine != null) StopCoroutine(dialogueCoroutine);
 
                 if (!npcQuestController.CheckIfThisIsQuest())
                 {
@@ -169,7 +173,7 @@ public class DialogueController : MonoBehaviour
         gameplayUIObj.SetActive(false);
         dialogueObj.SetActive(true);
         playerControls.Disable = true;
-        StartCoroutine(ShowDialogue());
+        dialogueCoroutine = StartCoroutine(ShowDialogue());
     }
 
     private IEnumerator ShowDialogue()
@@ -213,6 +217,8 @@ public class DialogueController : MonoBehaviour
         {
             if (showText != null)
                 StopCoroutine(showText);
+
+            if (dialogueCoroutine != null) StopCoroutine(dialogueCoroutine);
 
             dialogueObj.SetActive(false);
 

@@ -140,6 +140,7 @@ public class BattleSystemController : MonoBehaviour
         if (currentBattleIndex >= enemyList.Count)
         {
             //  WIN HERE
+            WinPlayer();
             return;
         }
 

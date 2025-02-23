@@ -15,6 +15,7 @@ TagManager:
   - QuestionQuest
   - Stage4Question
   - Merchant
+  - Card
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - Box
   - CollapseFloor
   - Merchant
-  - 
+  - Card
   - 
   - 
   - 

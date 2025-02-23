@@ -102,6 +102,10 @@ public class UserData : ScriptableObject
         PlayerStatistics.Add("stageFourWrongAnswers", 0);
         PlayerStatistics.Add("stageFiveRightAnswers", 0);
         PlayerStatistics.Add("stageFiveWrongAnswers", 0);
+        PlayerStatistics.Add("stageSixRightAnswers", 0);
+        PlayerStatistics.Add("stageSixWrongAnswers", 0);
+        PlayerStatistics.Add("stageSevenRightAnswers", 0);
+        PlayerStatistics.Add("stageSevenWrongAnswers", 0);
     }
 
     private void CheckCameraSensitivity()
@@ -120,5 +124,13 @@ public class UserData : ScriptableObject
         CurrentMoney = money;
         InventoryItems = inventory;
         PlayerStatistics = playerStatistics;
+
+        if (!playerStatistics.ContainsKey("stageSixRightAnswers"))
+        {
+            PlayerStatistics.Add("stageSixRightAnswers", 0);
+            PlayerStatistics.Add("stageSixWrongAnswers", 0);
+            PlayerStatistics.Add("stageSevenRightAnswers", 0);
+            PlayerStatistics.Add("stageSevenWrongAnswers", 0);
+        }
     }
 }

@@ -93,6 +93,11 @@ public class StageSixController : MonoBehaviour
     {
         healthSlider.value = userData.CurrentHealth / 100f;
 
+        if (userData.PlayerStatistics.ContainsKey("stageSixWrongAnswers"))
+            userData.PlayerStatistics["stageSixWrongAnswers"] += 1;
+        else
+            userData.PlayerStatistics.Add("stageSixWrongAnswers", 1);
+
         if (userData.CurrentHealth <= 0f)
         {
             GameOver();

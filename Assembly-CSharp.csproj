@@ -76,6 +76,7 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\PlayerStageOneHiragana.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingSceneSwitching.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\001 - Stage2\SentencesStatues.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\005 - Stage 7\PairPopData.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\TestingZLegacy.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\NotificationController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleAttackController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\PlayerDeath.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\PlayerCameraController.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\005 - Stage 7\PairPopController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingIssue.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\TestingZLegacyExt.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\002 - Quest\StageOneController.cs" />
@@ -163,6 +165,7 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleAnswerItem.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleCharacterController.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\005 - Stage 7\PairPopCards.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\Testing243.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\001 - Platform\CollapsingPlatform.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingSequencer.cs" />

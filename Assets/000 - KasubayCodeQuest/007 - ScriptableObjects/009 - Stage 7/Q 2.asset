@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5adf8f371d733764b9e0128a176388b8, type: 3}
+  m_Name: Q 2
+  m_EditorClassIdentifier: 
+  pairOne: "\u3060\u308C\u304C\u305D\u308C\u3092\u3057\u307E\u3057\u305F\u304B\uFF1F\\nDare
+    ga sore o shimashita ka?"
+  pairTwo: "\u3053\u3046\u3048\u3093\u306B\u3044\u304D\u307E\u3059\u3002\\nRomaji:
+    Kouen ni ikimasu"
