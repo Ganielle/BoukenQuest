@@ -18,3 +18,5 @@ MonoBehaviour:
   - "a.) \u3067\u3059"
   - "b.) \u307E\u3059"
   <RightAnswer>k__BackingField: "a.) \u3067\u3059"
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: c1394471ff90c9646bcca1ef76d95dd3,
+    type: 3}

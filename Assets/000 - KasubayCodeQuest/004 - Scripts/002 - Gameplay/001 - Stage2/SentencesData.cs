@@ -14,4 +14,5 @@ public struct Sentences
     public string characters;
     public string translation;
     public string index;
+    public AudioClip textToSpeech;
 }

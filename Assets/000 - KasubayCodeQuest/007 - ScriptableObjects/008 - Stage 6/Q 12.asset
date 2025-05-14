@@ -16,3 +16,5 @@ MonoBehaviour:
     wa takai ringo desu.\n\nEnglish:\nThat is an expensive apple."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: INCORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 81681d53610a48b4f986d5b08fdfa85b,
+    type: 3}

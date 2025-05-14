@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adf8f371d733764b9e0128a176388b8, type: 3}
   m_Name: Q 5
   m_EditorClassIdentifier: 
-  pairOne: "\u306A\u305C\u3046\u3054\u304B\u306A\u3044\u306E\u3067\u3059\u304B\uFF1F\\nRomaji:
-    Naze ugokanai no desu ka?"
-  pairTwo: "\u3067\u3093\u304D\u304C\u304D\u3048\u3066\u3044\u307E\u3059\u3002\\nRomaji:
-    Denki ga kie teimasu."
+  pairOne: "\u3069\u3053\u3067\u3042\u3044\u307E\u3057\u305F\u304B\uFF1F\\nDoko de
+    aimashita ka? "
+  pairTwo: "\u3048\u304D\u3067\u3042\u3044\u307E\u3057\u305F\u3002\\nEki de aimashita."
+  pairPopOne: {fileID: 8300000, guid: 161fc4568bcb7cd44830ee8334dbdf06, type: 3}
+  pairPopTwo: {fileID: 8300000, guid: 63ad775e2c1baa448b37b7510a728250, type: 3}

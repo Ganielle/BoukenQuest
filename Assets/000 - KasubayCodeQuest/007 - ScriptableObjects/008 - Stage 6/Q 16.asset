@@ -16,3 +16,5 @@ MonoBehaviour:
     desu ie.\n\nEnglish:\nThe house is small."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: INCORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: ff6bbbea069991a428d3d7a75b304069,
+    type: 3}

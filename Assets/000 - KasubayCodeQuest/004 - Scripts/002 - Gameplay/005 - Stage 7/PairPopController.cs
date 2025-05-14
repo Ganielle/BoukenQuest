@@ -160,9 +160,11 @@ public class PairPopController : MonoBehaviour
 
             mainCardListTemp[firstCardIndex].CardAnswer.text = pairPopDatasTemp[i].pairOne;
             mainCardListTemp[firstCardIndex].CardNumber = cardindex;
+            mainCardListTemp[firstCardIndex].TextToSpeech = pairPopDatasTemp[i].pairPopOne;
 
             mainCardListTemp[secondCardIndex].CardAnswer.text = pairPopDatasTemp[i].pairTwo;
             mainCardListTemp[secondCardIndex].CardNumber = cardindex;
+            mainCardListTemp[secondCardIndex].TextToSpeech = pairPopDatasTemp[i].pairPopTwo;
 
             cardindex++;
         }
@@ -198,7 +200,7 @@ public class PairPopController : MonoBehaviour
         {
             if (!CanPick || CurrentPairPopState != PairPopState.GAMEPLAY) return;
 
-            if (!Input.GetKeyDown(KeyCode.Mouse0)) return;
+            if (!Input.GetKeyUp(KeyCode.Mouse0)) return;
 
             RectTransformUtility.ScreenPointToLocalPointInRectangle(boardRT, Input.mousePosition, GameManager.Instance.UICamera, out localPoint);
 
@@ -214,40 +216,47 @@ public class PairPopController : MonoBehaviour
             if (hit.collider == null)
                 return;
 
-            if (!hit.collider.CompareTag("Card"))
-                return;
-
-            //GameObject clickPoint = Instantiate(pinkPixel);
-            //clickPoint.transform.position = new Vector3(worldPoint.x, worldPoint.y,  3f);
-
-            if (firstSelectedCard == null)
+            if (hit.collider.CompareTag("Card"))
             {
-                firstSelectedCard = hit.transform.gameObject.GetComponent<PairPopCards>();
-
-                if (firstSelectedCard.IsFlipped)
+                if (firstSelectedCard == null)
                 {
-                    firstSelectedCard = null;
-                    return;
-                }
+                    firstSelectedCard = hit.transform.gameObject.GetComponent<PairPopCards>();
 
-                firstSelectedCard.FlipCardFront();
-            }
-            else
-            {
-                if (firstSelectedCard != hit.transform.gameObject.GetComponent<PairPopCards>())
-                {
-                    secondSelectedCard = hit.transform.gameObject.GetComponent<PairPopCards>();
-
-                    if (secondSelectedCard.IsFlipped)
+                    if (firstSelectedCard.IsFlipped)
                     {
-                        secondSelectedCard = null;
+                        firstSelectedCard = null;
                         return;
                     }
 
-                    secondSelectedCard.FlipCardFront();
-                    StartCoroutine(CheckCard());
+                    firstSelectedCard.FlipCardFront();
+                }
+                else
+                {
+                    if (firstSelectedCard != hit.transform.gameObject.GetComponent<PairPopCards>())
+                    {
+                        secondSelectedCard = hit.transform.gameObject.GetComponent<PairPopCards>();
+
+                        if (secondSelectedCard.IsFlipped)
+                        {
+                            secondSelectedCard = null;
+                            return;
+                        }
+
+                        secondSelectedCard.FlipCardFront();
+                        StartCoroutine(CheckCard());
+                    }
                 }
             }
+            else if (hit.collider.CompareTag("TextToSpeech"))
+            {
+                firstSelectedCard = hit.transform.parent.gameObject.GetComponent<PairPopCards>();
+
+                firstSelectedCard.PlaySpeech();
+            }
+            //GameObject clickPoint = Instantiate(pinkPixel);
+            //clickPoint.transform.position = new Vector3(worldPoint.x, worldPoint.y,  3f);
+
+            
         }
     }
 

@@ -44,17 +44,19 @@ public class Stage4QuestionController : MonoBehaviour
         }
     }
 
-    public void SetupAnswerItems(List<string> answer, string question)
+    public void SetupAnswerItems(List<string> answer, string question, AudioClip questionClip, List<AudioClip> answerClips)
     {
         questionItem.question = question;
-        StartCoroutine(SetDatas(answer));
+        questionItem.questionClip = questionClip;
+        StartCoroutine(SetDatas(answer, answerClips));
     }
 
-    IEnumerator SetDatas(List<string> answer)
+    IEnumerator SetDatas(List<string> answer, List<AudioClip> answerClips)
     {
         for (int a = 0; a < answer.Count; a++)
         {
             answerItems[a].answer = answer[a];
+            answerItems[a].answerClip = answerClips[a];
             yield return null;
         }
     }

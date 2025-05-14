@@ -16,18 +16,24 @@ MonoBehaviour:
   - characters: "\u304A\u304A\u304D\u304F\u3066\u3001"
     translation: ookikute
     index: 4
+    textToSpeech: {fileID: 8300000, guid: 100789a7d77af3149ba96a95f73f5a5c, type: 3}
   - characters: "\u3044\u3048\u3001"
     translation: ie
     index: 2
+    textToSpeech: {fileID: 8300000, guid: 4afe77b1f5a490f448ed9a94bcdaddf8, type: 3}
   - characters: "\u308F\u305F\u3057\u306E\u3001"
     translation: watashi no
     index: 1
+    textToSpeech: {fileID: 8300000, guid: 6afb001eed7b2fe45ac777584d325e4e, type: 3}
   - characters: "\u306F\u3001"
     translation: wa
     index: 3
+    textToSpeech: {fileID: 8300000, guid: 4eae846c6e4888f48ae138806f1c724c, type: 3}
   - characters: "\u3067\u3059\u3001"
     translation: desu
     index: 6
+    textToSpeech: {fileID: 8300000, guid: eaa05514f2e636f42abf6e2ba040003e, type: 3}
   - characters: "\u304D\u308C\u3044\u3002"
     translation: kirei
     index: 5
+    textToSpeech: {fileID: 8300000, guid: 5f498843d1a0b854db4e6c8eae5bddd3, type: 3}

@@ -16,3 +16,5 @@ MonoBehaviour:
     kamera wa benri desu.\n\nEnglish:\nThis camera is convenient."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: CORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 2721860f777648d4bb8e78dd5c396644,
+    type: 3}

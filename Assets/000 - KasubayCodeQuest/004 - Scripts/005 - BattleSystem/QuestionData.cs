@@ -10,5 +10,6 @@ public class QuestionData : ScriptableObject
     [field: SerializeField] public string RightAnswer { get; private set; }
     [field: SerializeField] public string Tips { get; private set; }
     [field: SerializeField] public bool HaveCodeQuestion { get; private set; }
+    [field: SerializeField] public AudioClip AnswerClip { get; private set; }
     [field: TextArea] [field: SerializeField] public string CodeQuestion { get; private set; }
 }

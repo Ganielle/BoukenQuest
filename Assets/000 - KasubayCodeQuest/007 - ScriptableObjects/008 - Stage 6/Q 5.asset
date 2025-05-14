@@ -16,3 +16,5 @@ MonoBehaviour:
     wa chiisai ie ni sundeimasu.\n\nEnglish:\nI live in a small house."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: CORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: d631d9e743a5f6742b63214d6427dd37,
+    type: 3}

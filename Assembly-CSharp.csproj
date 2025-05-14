@@ -81,7 +81,9 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\NotificationController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\LogoCinematic.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\003 - Stage4\Stage4AnswerItem.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\Adapters\AlertAndroidOptions.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralEventsListeners.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\Adapters\AlertUnityAdapter.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\LevelItemController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\004 - Stage 6\StageSixQuestionController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - Inventory\InventoryController.cs" />
@@ -91,10 +93,14 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\PlayerDeath.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\PlayerCameraController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\005 - Stage 7\PairPopController.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\AlertManager.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingIssue.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\Adapters\AlertIOSAdapter.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\TestingZLegacyExt.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\002 - Quest\StageOneController.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\Adapters\AlertIOSOptions.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingMaxTweens.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\Adapters\AlertUnityUIAdapter.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\003 - Stage4\Stage4SceneController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralSimpleUI.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\004 - Stage 6\PlatformController.cs" />
@@ -114,10 +120,13 @@
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Framework\LTSeq.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralEasingTypes.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\001 - Controller\StageOneGamePlayerController.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\AlertAndroid.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Framework\LeanTweenExt.cs" />
+    <Compile Include="Assets\PaperPlaneTools\AlertSkin\Scripts\Scaler.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\StageOnePlayerMovement.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\001 - Stage2\SentencesController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\003 - Dialogue\DialogueData.cs" />
+    <Compile Include="Assets\UnityAnalytics.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralAdvancedTechniques.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\SceneController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\PathSplines.cs" />
@@ -128,8 +137,10 @@
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\Testing248.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\CanvasUICameraSetter.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\004 - Quest\QuestData.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\Adapters\AlertAndroidAdapter.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralCameraShake.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\PlayerInteraction.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\AlertIOSButton.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\CameraScaler.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\002 - Stage3\Stage3Controller.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Framework\LeanAudio.cs" />
@@ -149,6 +160,7 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\PlayerPushObject.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\001 - Stage2\SentenceArrangeItem.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\004 - Quest\ItemQuestData.cs" />
+    <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\TextToSpeechController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\002 - Quest\HiraganaArrangeItem.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\000 - GameManager\GameManager.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\002 - Stage3\Stage3QuestionData.cs" />
@@ -156,7 +168,9 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\002 - Stage3\Stage3AnswerItem.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingColorTweening.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingRotate.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\Adapters\IAlertAdapter.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\GeneralSequencer.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\Alert.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleUIBtnController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\003 - Dialogue\DialogueController.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\Testing246.cs" />
@@ -164,6 +178,7 @@
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\000 - Stage1\PlayerWin.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleAnswerItem.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Examples\Scripts\PathSpline2d.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\AlertMonoBehaviour.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\005 - BattleSystem\BattleCharacterController.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\005 - Stage 7\PairPopCards.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\Testing243.cs" />
@@ -175,6 +190,7 @@
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Framework\LTDescrOptional.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\004 - Stage 6\PlayerPlatformCheckerStage6.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\LessonQuestController.cs" />
+    <Compile Include="Assets\PaperPlaneTools\Alert\AlertIOS.cs" />
     <Compile Include="Assets\000 - KasubayCodeQuest\004 - Scripts\002 - Gameplay\001 - Stage2\SentencesData.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingIssue2.cs" />
     <Compile Include="Assets\001 - ExternalAssets\LeanTween\Testing\TestingOptionalCancel.cs" />
@@ -191,6 +207,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\PaperPlaneTools\AlertSkin\Skin_1\info\fonts.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
@@ -202,8 +219,10 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\001 - ExternalAssets\TirGames\ReadMeSchoolScene.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\PaperPlaneTools\Documentation\AlertDocumentation.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\PaperPlaneTools\AlertSkin\Skin_1\info\art.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Hovl Studio\Magic effects pack\Demo scene\Readme.txt" />
@@ -1352,6 +1371,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UniWebView-CSharp.csproj">
+      <Project>{FF1854CC-985B-682D-99B7-0BCCB02727AF}</Project>
+      <Name>UniWebView-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniWebView-CSharp.Editor.csproj">
+      <Project>{17D04886-FDEF-56E7-25A7-A0978B81AAF8}</Project>
+      <Name>UniWebView-CSharp.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

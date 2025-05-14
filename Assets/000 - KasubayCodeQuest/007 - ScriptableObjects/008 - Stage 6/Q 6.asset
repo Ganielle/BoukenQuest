@@ -16,3 +16,5 @@ MonoBehaviour:
     ga kirei desu.\n\nEnglish:\nThe flower is beautiful."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: CORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: be069be44155a0a44be52b9ae16ca4e6,
+    type: 3}

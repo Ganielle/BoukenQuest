@@ -19,3 +19,10 @@ MonoBehaviour:
   - "\u306A\u3044"
   - "\u3058\u3083\u306A\u3044"
   <RightAnswer>k__BackingField: "\u307E\u305B\u3093"
+  <QuestionClip>k__BackingField: {fileID: 8300000, guid: bc60d59d8acf446479295087ae176136,
+    type: 3}
+  <AnswerClip>k__BackingField:
+  - {fileID: 8300000, guid: 32954d22c7e53564baaf60a60bbc8b14, type: 3}
+  - {fileID: 8300000, guid: 142d4135f529ea94b825f387025393f0, type: 3}
+  - {fileID: 8300000, guid: fba9580ce5ecb744492197e7253c3d70, type: 3}
+  - {fileID: 8300000, guid: 1a104afefc568a54a8b0bbe87ad0cef3, type: 3}

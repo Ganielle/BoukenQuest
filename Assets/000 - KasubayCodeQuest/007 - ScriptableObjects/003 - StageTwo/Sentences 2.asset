@@ -16,12 +16,16 @@ MonoBehaviour:
   - characters: "\u306B\u307B\u3093\u3001"
     translation: Nihon
     index: 3
+    textToSpeech: {fileID: 8300000, guid: 3775b45b1d1a6934db8360396a2e382c, type: 3}
   - characters: "\u306B\u3059\u3093\u3067\u3044\u307E\u3059\u3001"
     translation: ni sundeimasu
     index: 4
+    textToSpeech: {fileID: 8300000, guid: 49cb461a045250342afdef7e3b96eae5, type: 3}
   - characters: "\u304B\u306E\u3058\u3087\u306F\u3001"
     translation: kanojo wa
     index: 1
+    textToSpeech: {fileID: 8300000, guid: f72cd7a30b5001148bb8cfb81ab64364, type: 3}
   - characters: "\u3068\u3082\u3060\u3061\u3068\u3002"
     translation: tomodachi to
     index: 2
+    textToSpeech: {fileID: 8300000, guid: bc176261eb22cf244af2be2e9bf72433, type: 3}

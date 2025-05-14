@@ -32,6 +32,7 @@ public class Stage3Controller : MonoBehaviour
 
     [SerializeField] private UserData userData;
     [SerializeField] private SchoolSceneData schoolSceneData;
+    [SerializeField] private TextToSpeechController textToSpeechController;
     [SerializeField] private Slider healthSlider;
 
     [Space]
@@ -120,6 +121,11 @@ public class Stage3Controller : MonoBehaviour
         }
 
         questionPanelObj.SetActive(true);
+    }
+
+    public void PlayTextToSpeech()
+    {
+        textToSpeechController.PlaySpeech(questionDatas[questionIndex].TextToSpeech);
     }
 
     public void CheckAnswer()

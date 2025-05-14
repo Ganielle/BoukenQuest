@@ -16,3 +16,5 @@ MonoBehaviour:
     wa se ga takai desu.\n\nEnglish:\nHe is tall."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: CORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 8a571becc0f5a814086dd78ffea624cd,
+    type: 3}

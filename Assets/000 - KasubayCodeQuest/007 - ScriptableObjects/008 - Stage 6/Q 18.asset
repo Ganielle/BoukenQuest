@@ -16,3 +16,5 @@ MonoBehaviour:
     desu kuruma.\n\nEnglish:\nThe car is new."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: INCORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 664dab5f0ef02c34ba6b5bf6516a53e4,
+    type: 3}

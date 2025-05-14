@@ -16,3 +16,5 @@ MonoBehaviour:
     desu hon.\n\nEnglish:\nThe book is interesting."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: INCORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 4762270722ebd3349bbc544fc4f4e866,
+    type: 3}

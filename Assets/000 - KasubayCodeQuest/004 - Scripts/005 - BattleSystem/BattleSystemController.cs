@@ -32,9 +32,11 @@ public class BattleSystemController : MonoBehaviour
 
     [SerializeField] private UserData userData;
     [SerializeField] private SchoolSceneData schoolSceneData;
+    [SerializeField] private TextToSpeechController textToSpeechController;
 
     [Space]
     [SerializeField] private int currentQuest;
+    [SerializeField] private Button questionClipBtn;
 
     [Space]
     [SerializeField] private AudioClip backgroundMusicClip;
@@ -181,6 +183,8 @@ public class BattleSystemController : MonoBehaviour
         for (int a = 0; a < questionList[currentBattleIndex].Answers.Count; a++)
         {
             answerItems[a].SetupData(questionList[currentBattleIndex].Answers[a]);
+            questionClipBtn.onClick.RemoveAllListeners();
+            questionClipBtn.onClick.AddListener(() => textToSpeechController.PlaySpeech(questionList[currentBattleIndex].AnswerClip));
         }
     }
 

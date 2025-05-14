@@ -14,7 +14,7 @@ public class StageSixQuestionController : MonoBehaviour
     [Header("DEBUGGER")]
     public int currentIndex;
 
-    public void InitializePlatform(bool ATurnOn, bool BTurnOn, string correctAnswer, string wrongAnswer, int index)
+    public void InitializePlatform(bool ATurnOn, bool BTurnOn, string correctAnswer, string wrongAnswer, int index, AudioClip clip)
     {
         answerACollider.enabled = ATurnOn;
         answerBCollider.enabled = BTurnOn;
@@ -22,7 +22,7 @@ public class StageSixQuestionController : MonoBehaviour
         answerABoxCollision.enabled = ATurnOn;
         answerBBoxCollision.enabled = BTurnOn;
 
-        platformControllerA.InitializeData(ATurnOn ? correctAnswer : wrongAnswer, index);
-        platformControllerB.InitializeData(BTurnOn ? correctAnswer : wrongAnswer, index);
+        platformControllerA.InitializeData(ATurnOn ? correctAnswer : wrongAnswer, index, clip);
+        platformControllerB.InitializeData(BTurnOn ? correctAnswer : wrongAnswer, index, clip);
     }
 }

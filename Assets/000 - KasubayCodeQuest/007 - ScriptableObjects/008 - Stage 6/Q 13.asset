@@ -16,3 +16,5 @@ MonoBehaviour:
     desu hon.\n\nEnglish:\nThe book is new."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: INCORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: bf48573c78af2e44ba535b83d29e125b,
+    type: 3}

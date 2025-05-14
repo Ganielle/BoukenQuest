@@ -16,3 +16,5 @@ MonoBehaviour:
     wa omoshiroi desu.\n\nEnglish:\nThat is interesting."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: CORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: e257603a88e58244d9036d59e001e62b,
+    type: 3}

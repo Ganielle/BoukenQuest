@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class HiraganaArrangeItem : MonoBehaviour
 {
+    [SerializeField] private TextToSpeechController controller;
+
+    [Space]
     [SerializeField] private TextMeshProUGUI hiraganaTMP;
     [SerializeField] private TextMeshProUGUI indexTMP;
 
@@ -39,4 +42,6 @@ public class HiraganaArrangeItem : MonoBehaviour
 
         indexTMP.text = $"{itemIndex}";
     }
+
+    public void PlaySpeech() => controller.PlaySpeech(itemData.TextToSpeech);
 }

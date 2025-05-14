@@ -10,6 +10,7 @@ public class Stage4AnswerItem : MonoBehaviour
 
     [Header("DEBUGGER")]
     [SerializeField] public string answer;
+    [SerializeField] public AudioClip answerClip;
 
     public void CheckAnswer()
     {

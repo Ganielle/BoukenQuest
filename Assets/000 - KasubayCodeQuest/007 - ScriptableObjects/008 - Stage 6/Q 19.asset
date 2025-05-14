@@ -16,3 +16,5 @@ MonoBehaviour:
     desu sushi.\n\nEnglish:\nThe sushi is delicious."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: INCORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 7a3bb109a860842458ed7d6239b1eae9,
+    type: 3}

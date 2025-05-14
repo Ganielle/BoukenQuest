@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adf8f371d733764b9e0128a176388b8, type: 3}
   m_Name: Q 7
   m_EditorClassIdentifier: 
-  pairOne: "\u3060\u308C\u304C\u3044\u304D\u307E\u3059\u304B\uFF1F\\nRomaji: Dare
-    ga ikimasu ka?"
-  pairTwo: "\u308F\u305F\u3057\u304C\u3044\u304D\u307E\u3059\u3002\\nRomaji: Watashi
-    ga ikimasu."
+  pairOne: "\u306A\u306B\u3092\u3057\u307E\u3057\u305F\u304B\uFF1F\\nNani o shimashita
+    ka? "
+  pairTwo: "\u3079\u3093\u304D\u3087\u3046\u3092\u3057\u307E\u3057\u305F\u3002\\nBenkyou
+    o shimashita."
+  pairPopOne: {fileID: 8300000, guid: 4d092a9d967f20c4481a901d3d3a8344, type: 3}
+  pairPopTwo: {fileID: 8300000, guid: 620536e68e4a3664980dc7460c0beea5, type: 3}

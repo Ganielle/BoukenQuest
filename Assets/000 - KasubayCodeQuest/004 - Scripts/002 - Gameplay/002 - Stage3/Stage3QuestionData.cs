@@ -8,4 +8,5 @@ public class Stage3QuestionData : ScriptableObject
     [field: TextArea] [field: SerializeField] public string Question { get; private set; }
     [field: SerializeField] public List<string> Answers { get; private set; }
     [field: SerializeField] public string RightAnswer { get; private set; }
+    [field: SerializeField] public AudioClip TextToSpeech { get; private set; }
 }

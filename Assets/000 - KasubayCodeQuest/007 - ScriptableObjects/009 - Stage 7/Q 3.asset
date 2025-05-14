@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5adf8f371d733764b9e0128a176388b8, type: 3}
   m_Name: Q 3
   m_EditorClassIdentifier: 
-  pairOne: "\u3060\u308C\u304C\u305D\u308C\u3092\u3057\u307E\u3057\u305F\u304B\uFF1F\\nRomaji:
-    Dare ga sore o shimashita ka?"
-  pairTwo: "\u3084\u307E\u3060\u3055\u3093\u304C\u3057\u307E\u3057\u305F\u3002\\nRomaji:
-    Yamada-san ga shimashita"
+  pairOne: "\u306A\u306B\u3092\u305F\u3079\u307E\u3057\u305F\u304B\uFF1F\\nNani o
+    tabemashita ka? "
+  pairTwo: "\u3071\u3093\u3092\u305F\u3079\u307E\u3057\u305F\u3002\\nPan o tabemashita."
+  pairPopOne: {fileID: 8300000, guid: b7f8d6eff41b3004d94921a1b60850d6, type: 3}
+  pairPopTwo: {fileID: 8300000, guid: cc044028dc62a4841947ae3739085d3f, type: 3}

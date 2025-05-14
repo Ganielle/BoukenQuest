@@ -11,6 +11,7 @@ public class PlatformController : MonoBehaviour
 
     [Header("DEBUGGER")]
     public int questionIndex;
+    public AudioClip clip;
 
     private void OnEnable()
     {
@@ -22,10 +23,11 @@ public class PlatformController : MonoBehaviour
         CheckQuestionIndex();
     }
 
-    public void InitializeData(string answer, int index)
+    public void InitializeData(string answer, int index, AudioClip clip)
     {
         answerTMP.text = answer;
         questionIndex = index;
+        this.clip = clip;
         CheckQuestionIndex();
     }
 

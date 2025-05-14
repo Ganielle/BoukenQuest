@@ -132,9 +132,9 @@ public class SentencesController : MonoBehaviour
             Debug.Log($"{a} / {tempDatas.Count} ({(a < tempDatas.Count ? tempDatas[a].translation : "")})");
             Debug.Log(a < tempDatas.Count);
             if (a < tempDatas.Count)
-                answerItems[a].SetData(tempDatas[a].characters, tempDatas[a].translation);
+                answerItems[a].SetData(tempDatas[a].characters, tempDatas[a].translation, tempDatas[a].textToSpeech);
             else
-                answerItems[a].SetData("", "");
+                answerItems[a].SetData("", "", null);
 
             yield return null;
         }

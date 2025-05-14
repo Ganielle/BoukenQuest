@@ -69,7 +69,7 @@ public class Stage4SceneController : MonoBehaviour
     {
         for (int a = 0; a < questionControllers.Count; a++)
         {
-            questionControllers[a].SetupAnswerItems(questionDatas[a].Answers, questionDatas[a].Question);
+            questionControllers[a].SetupAnswerItems(questionDatas[a].Answers, questionDatas[a].Question, questionDatas[a].QuestionClip, questionDatas[a].AnswerClip);
 
             yield return null;
         }

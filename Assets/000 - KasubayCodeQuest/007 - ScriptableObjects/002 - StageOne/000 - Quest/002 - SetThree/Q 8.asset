@@ -15,3 +15,5 @@ MonoBehaviour:
   <ItemCharacters>k__BackingField: "\u3075 "
   <EnglishTranslation>k__BackingField: fu
   <ItemIndex>k__BackingField: 8
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: f81e391498e1554448a06ee11c627b74,
+    type: 3}

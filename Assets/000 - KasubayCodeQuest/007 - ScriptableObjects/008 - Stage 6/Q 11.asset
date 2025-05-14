@@ -16,3 +16,5 @@ MonoBehaviour:
     ookii o mimashita.\n\nEnglish:\nI saw a big dog."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: INCORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 7a2eb569dd78b004bb5d1514bbf0d206,
+    type: 3}

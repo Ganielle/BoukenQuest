@@ -16,3 +16,5 @@ MonoBehaviour:
     desu kuruma.\n\nEnglish:\nThe car is red."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: INCORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 0e8dab38e3e1db242897ece3057b36bd,
+    type: 3}

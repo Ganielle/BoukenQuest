@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairOne: "\u3060\u308C\u304C\u305D\u308C\u3092\u3057\u307E\u3057\u305F\u304B\uFF1F\\nDare
     ga sore o shimashita ka?"
-  pairTwo: "\u3053\u3046\u3048\u3093\u306B\u3044\u304D\u307E\u3059\u3002\\nRomaji:
-    Kouen ni ikimasu"
+  pairTwo: "\u3084\u307E\u3060\u3055\u3093\u304C\u3057\u307E\u3057\u305F\u3002\\nYamada-san
+    ga shimashita "
+  pairPopOne: {fileID: 8300000, guid: 6778a947358beb941907d32f983346fb, type: 3}
+  pairPopTwo: {fileID: 8300000, guid: b0b7c2b40cb30e34298e1f84836ed83a, type: 3}

@@ -16,15 +16,20 @@ MonoBehaviour:
   - characters: "\u3053\u308C\u3001"
     translation: Kore
     index: 1
+    textToSpeech: {fileID: 8300000, guid: 3bdb167a9facb4a4891b5173d2a3caee, type: 3}
   - characters: "\u307B\u3093\u3001"
     translation: hon
     index: 4
+    textToSpeech: {fileID: 8300000, guid: e34313b946d333b4dbd251bc81e71f6d, type: 3}
   - characters: "\u304C\u3001"
     translation: wa
     index: 2
+    textToSpeech: {fileID: 8300000, guid: 5186c3fd022384b4a9a906adb82497e4, type: 3}
   - characters: "\u3067\u3059\u3001"
     translation: desu
     index: 5
+    textToSpeech: {fileID: 8300000, guid: f57d8c2eaaa1ff148822be95b63370ba, type: 3}
   - characters: "\u3042\u304B\u3044\u3002"
     translation: akai
     index: 3
+    textToSpeech: {fileID: 8300000, guid: 64a8927d0c89d364b9a41c7ad7dc3acf, type: 3}

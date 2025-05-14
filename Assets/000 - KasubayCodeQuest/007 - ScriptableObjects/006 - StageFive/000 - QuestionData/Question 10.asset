@@ -21,4 +21,6 @@ MonoBehaviour:
   <RightAnswer>k__BackingField: "\u306F"
   <Tips>k__BackingField: 
   <HaveCodeQuestion>k__BackingField: 0
+  <AnswerClip>k__BackingField: {fileID: 8300000, guid: a562f0bc6634a8640837813b5fa560b8,
+    type: 3}
   <CodeQuestion>k__BackingField: 

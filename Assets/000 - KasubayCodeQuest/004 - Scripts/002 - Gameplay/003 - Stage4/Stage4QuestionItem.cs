@@ -7,4 +7,5 @@ public class Stage4QuestionItem : MonoBehaviour
 {
     [Header("DEBUGGER")]
     [SerializeField] public string question;
+    [SerializeField] public AudioClip questionClip;
 }

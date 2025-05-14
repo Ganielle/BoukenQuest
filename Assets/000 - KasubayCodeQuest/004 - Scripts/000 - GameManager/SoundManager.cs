@@ -117,6 +117,10 @@ public class SoundManager : MonoBehaviour
         });
     }
 
+    public void SetBGMusicToLow() => bgSource.volume = 0.1f;
+
+    public void ResetBGMusicVolume() => bgSource.volume = CurrenBGVolume;
+
     public void PlaySFX(AudioClip clip) => sfxSource.PlayOneShot(clip);
 
     private void ChangeVolume()

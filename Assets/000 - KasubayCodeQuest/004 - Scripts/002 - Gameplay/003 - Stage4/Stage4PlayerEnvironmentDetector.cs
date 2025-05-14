@@ -8,7 +8,10 @@ public class Stage4PlayerEnvironmentDetector : MonoBehaviour
 {
     [SerializeField] private UserData userData;
     [SerializeField] private GamePlayerController playerController;
+    [SerializeField] private TextToSpeechController textToSpeechController;
     [SerializeField] private Button interactBtn;
+    [SerializeField] private Button questionSpeechBtn;
+    [SerializeField] private Button answerSpeechBtn;
 
     [Space]
     [SerializeField] private GameObject answerPanelObj;
@@ -31,11 +34,19 @@ public class Stage4PlayerEnvironmentDetector : MonoBehaviour
         {
             stage4AnswerItem = other.GetComponent<Stage4AnswerItem>();
             answerTMP.text = stage4AnswerItem.answer;
+
+            answerSpeechBtn.onClick.RemoveAllListeners();
+            answerSpeechBtn.onClick.AddListener(() => textToSpeechController.PlaySpeech(stage4AnswerItem.answerClip));
+
             answerPanelObj.SetActive(true);
         }
         else if (other.CompareTag("Stage4Question"))
         {
             questionTMP.text = other.GetComponent<Stage4QuestionItem>().question;
+
+            questionSpeechBtn.onClick.RemoveAllListeners();
+            questionSpeechBtn.onClick.AddListener(() => textToSpeechController.PlaySpeech(other.GetComponent<Stage4QuestionItem>().questionClip));
+
             questionPanelObj.SetActive(true);
         }
     }

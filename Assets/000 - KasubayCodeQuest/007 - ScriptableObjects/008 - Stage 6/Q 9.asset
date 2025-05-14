@@ -16,3 +16,5 @@ MonoBehaviour:
     wa samui hi desu.\n\nEnglish:\nToday is a cold day."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: CORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 23d9742d30a45a74a97b0aec484ab848,
+    type: 3}

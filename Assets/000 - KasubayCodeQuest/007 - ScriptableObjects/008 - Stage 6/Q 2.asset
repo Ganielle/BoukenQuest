@@ -16,3 +16,5 @@ MonoBehaviour:
     wa akai kuruma o motteimasu.\n\nEnglish:\nI have a red car."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: CORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: dd6503d343724ac45ba04903a72538bb,
+    type: 3}

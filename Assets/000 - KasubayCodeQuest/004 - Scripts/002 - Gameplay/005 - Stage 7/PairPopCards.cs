@@ -24,6 +24,12 @@ public class PairPopCards : MonoBehaviour
         set => isFlipped = value;
     }
 
+    public AudioClip TextToSpeech
+    {
+        get => textToSpeech;
+        set => textToSpeech = value;
+    }
+
     public TextMeshPro CardAnswer
     {
         get => cardAnswer;
@@ -31,6 +37,7 @@ public class PairPopCards : MonoBehaviour
 
     //  ===========================
 
+    [SerializeField] private TextToSpeechController textToSpeechController;
     [SerializeField] private PairPopController controller;
     [SerializeField] private Sprite backCard;
     [SerializeField] private SpriteRenderer cardSR;
@@ -39,6 +46,7 @@ public class PairPopCards : MonoBehaviour
 
     [Header("DEBUGGER")]
     [SerializeField] private int cardNumber;
+    [SerializeField] private AudioClip textToSpeech;
     [SerializeField] private Sprite frontCard;
     [SerializeField] private bool isBackCard;
     [SerializeField] private bool isFlipped;
@@ -102,4 +110,6 @@ public class PairPopCards : MonoBehaviour
     public void ChangeToFrontCard() => cardSR.sprite = frontCard;
 
     public void ChangeToBackCard() => cardSR.sprite = backCard;
+
+    public void PlaySpeech() => textToSpeechController.PlaySpeech(TextToSpeech);
 }

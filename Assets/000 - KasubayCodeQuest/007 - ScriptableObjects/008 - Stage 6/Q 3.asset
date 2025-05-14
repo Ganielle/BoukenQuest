@@ -16,3 +16,5 @@ MonoBehaviour:
     wa omoshiroi hon o yomimasu.\n\nEnglish:\nShe reads an interesting book."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: CORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: d862cc98792dc6e4f877dae557789670,
+    type: 3}

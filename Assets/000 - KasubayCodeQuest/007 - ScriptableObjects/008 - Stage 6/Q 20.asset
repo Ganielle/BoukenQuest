@@ -16,3 +16,5 @@ MonoBehaviour:
     desu yama.\n\nEnglish:\nThe mountain is tall."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: INCORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 5054b9431b2238743991ff91a65913bb,
+    type: 3}

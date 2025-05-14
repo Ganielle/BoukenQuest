@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/UnityAnalytics.unity
+    guid: e26800b9b70d548fa908236806348257
+  - enabled: 1
     path: Assets/000 - KasubayCodeQuest/000 - Scene/Persistent.unity
     guid: af877b9b06991f848a5ad5d8804b7722
   - enabled: 1
@@ -29,6 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/000 - KasubayCodeQuest/000 - Scene/Stage5.unity
     guid: b9bc4e30841442540a9567f5d8f9c433
+  - enabled: 1
+    path: Assets/000 - KasubayCodeQuest/000 - Scene/Stage6.unity
+    guid: 04dbd7352e9a80a439a8adb159985949
+  - enabled: 1
+    path: Assets/000 - KasubayCodeQuest/000 - Scene/Stage7.unity
+    guid: 2086045b75892b24280252dd987c542b
   - enabled: 1
     path: Assets/001 - ExternalAssets/Bugchonmunhwa/Scenes/Demo.unity
     guid: a4d81cd8b8d8b0048ba9b318503aabbb

@@ -16,3 +16,5 @@ MonoBehaviour:
     desu neko.\n\nEnglish:\nThe cat is big."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: INCORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 65862d5bd968c2141af2b61e0c6ca56d,
+    type: 3}

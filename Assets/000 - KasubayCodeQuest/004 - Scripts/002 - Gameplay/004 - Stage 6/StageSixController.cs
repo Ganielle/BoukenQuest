@@ -33,6 +33,7 @@ public class StageSixController : MonoBehaviour
 
     [SerializeField] private UserData userData;
     [SerializeField] private SchoolSceneData schoolSceneData;
+    [SerializeField] private TextToSpeechController textToSpeechController;
 
     [Space]
     [SerializeField] private int currentQuest;
@@ -51,6 +52,7 @@ public class StageSixController : MonoBehaviour
     [Space]
     [SerializeField] private GameObject questionObj;
     [SerializeField] private TextMeshProUGUI questionTMP;
+    [SerializeField] private Button textToSpeechBtn;
 
     [Header("DEBUGGER")]
     [SerializeField] private int questionIndex;
@@ -70,8 +72,6 @@ public class StageSixController : MonoBehaviour
         userData.OnHealhChange += HealthChange;
 
         GameManager.Instance.SceneController.ActionPass = true;
-
-        QuestionShow();
     }
 
     private void OnDisable()
@@ -117,7 +117,13 @@ public class StageSixController : MonoBehaviour
 
     private void QuestionShow()
     {
+        Debug.Log(questions[questionIndex].Question);
         questionTMP.text = questions[questionIndex].Question;
+        textToSpeechBtn.onClick.RemoveAllListeners();
+        textToSpeechBtn.onClick.AddListener(() =>
+        {
+            textToSpeechController.PlaySpeech(questions[questionIndex].TextToSpeech);
+        });
         questionObj.SetActive(true);
 
         CurrentRestartPosition = playerTF.position;
@@ -128,9 +134,11 @@ public class StageSixController : MonoBehaviour
         for (int a = 0; a < platformControllers.Count; a++)
         {
             int rand = UnityEngine.Random.Range(0, 2);
-            platformControllers[a].InitializePlatform(rand == 0, rand == 1, questions[a].RightAnswer, questions[a].RightAnswer == "CORRECT" ? "INCORRECT" : "CORRECT", a);
+            platformControllers[a].InitializePlatform(rand == 0, rand == 1, questions[a].RightAnswer, questions[a].RightAnswer == "CORRECT" ? "INCORRECT" : "CORRECT", a, questions[a].TextToSpeech);
             yield return null;
         }
+
+        QuestionShow();
     }
 
 

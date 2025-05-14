@@ -8,4 +8,5 @@ public class ItemQuestData : ScriptableObject
     [field: SerializeField] public string ItemCharacters { get; private set; }
     [field: SerializeField] public string EnglishTranslation { get; private set; }
     [field: SerializeField] public string ItemIndex { get; private set; }
+    [field: SerializeField] public AudioClip TextToSpeech { get; private set; }
 }

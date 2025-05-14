@@ -16,3 +16,5 @@ MonoBehaviour:
     wa yasashii sensei desu.\n\nEnglish:\nHe is a kind teacher."
   <Answers>k__BackingField: []
   <RightAnswer>k__BackingField: CORRECT
+  <TextToSpeech>k__BackingField: {fileID: 8300000, guid: 85d453690a74a834997a49031d9418e9,
+    type: 3}
